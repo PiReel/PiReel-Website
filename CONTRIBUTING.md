@@ -17,7 +17,7 @@ This documents is a set of guidelines for contributing to Pi Reel on GitHub. The
 
 ## Contributing Website  
 
-[Pi Reel Contributing](https://pireel.github.io/PiReel-Website/) 
+[Pi Reel Contributing](https://pireel.github.io/PiReel-Contributing/) 
 
 ## Participation guidelines
 
@@ -25,9 +25,9 @@ This project adheres to a [code of conduct](CODE_OF_CONDUCT.md). By participatin
 
 ## Yearly
 
-Take a look at the issues in our [current milestone](https://github.com/acabunoc/mozfest-repo-template/milestone/1) or browse some [good first bugs](https://github.com/acabunoc/mozfest-repo-template/labels/good%20first%20bug) to get started!
+Take a look at the issues in our [current milestone](https://github.com/PiReel/PiReel-Contributing/milestones)
 
-Take a look at this [Roadmapping exercise](http://mozillascience.github.io/working-open-workshop/roadmapping/) to start making your own milestones and issues. This will help newcomers (& MozFest attendees!) know where they can help.
+Take a look at the [Pi Reel Roadmap](https://pireel.github.io/PiReel-Contributing/#roadmap-canvas).
 
 ## How to submit changes
 
