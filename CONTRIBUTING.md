@@ -1,10 +1,8 @@
 # Contributing to Pi Reel
 
-Add a bit of welcome and cheer at the top
->Thank you for your interest in contributing to [Project] :tada:! 
+Thank you for your interest in contributing to Pi Reel! 
 
-Restart your project vision here. Redundancy is your friend
->[Project] is ...
+We strive every day to bring a tolerant, compassionate, and just world to life by working in the open to collaborate on projects for science, engineering, and creating.
 
 Add some info on *why* people should read your contributor guidelines and *what* they are.
 
