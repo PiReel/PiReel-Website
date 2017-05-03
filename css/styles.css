@@ -19,6 +19,23 @@ body{
   background: rgba(77,77,77,1);
   border: outset 2px rgba(177,177,177,1);
 }
+.display{
+  margin: 5px 0px 5px 0px;
+  display: block;
+  background: rgba(215,215,255,1);
+}
+.canvas{
+  display: inline-block;
+  background: rgba(215,215,255,1); fill: rgba(215,215,255,1);
+}
+.btn{
+  padding: 1px; margin: 0px 2px 0px 2px;
+}
+
+/* [text classes] */
+.lite-text{
+  color: rgba(215,215,215,1);
+}
 
 /* [img classes] */
 @media screen and (min-width: 160px){
