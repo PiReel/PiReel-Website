@@ -22,11 +22,17 @@ body{
 .display{
   margin: 5px 0px 5px 0px;
   display: block;
-  background: rgba(215,215,255,1);
+  background: rgba(240,240,255,1);
+}
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
 }
 .canvas{
   display: inline-block;
-  background: rgba(215,215,255,1); fill: rgba(215,215,255,1);
+  background: rgba(215,215,255,1); fill: rgba(240,240,255,1);
 }
 .btn{
   padding: 1px; margin: 0px 2px 0px 2px;
@@ -35,6 +41,16 @@ body{
 /* [text classes] */
 .lite-text{
   color: rgba(215,215,215,1);
+}
+.paragraph{
+  font-size: 18px;
+}
+.sub-title{
+  font-size: 30px;
+}
+.h5{
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 /* [img classes] */

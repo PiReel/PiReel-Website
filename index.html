@@ -12,42 +12,69 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     
         <link rel="stylesheet" href="css/styles.css" type="text/css"></link>
-        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
-    
-        <script type="text/javascript" src="node_modules/x-tag/dist/jx.js"></script>
-    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 <style type="text/css">
-    
+    #welcome-canvas{
+        width: 75%; height: 600px;
+        overflow-Y: scroll;
+    }
+    #roadmap-canvas{
+        width: 75%; height: 600px;
+        overflow-Y: scroll;
+    }
 </style>
 
     </head>
 
     <body>
+<!-- [Top Tray Menu] -->
         <j-tray id="top-tray" class="tray">
-            <j-el class="btn">Settings</j-el>
-            <j-el class="btn">Preferences</j-el>
+            <j-el class="fa fa-gears btn lite-text" title="Settings"></j-el>
+            <j-el class="fa fa-eye btn lite-text" title="Preferences"></j-el>
         </j-tray>
+
+<!-- [Header] -->
         <header id="index-banner" class="header">
-            <img src="img/pireel.png" id="header-logo" class="logo"></img>
+            <a href="https://pireel.github.io/PiReel-Website/"><img src="img/pireel.png" id="header-logo" class="logo"></img></a>
         </header>
 
-        <j-tray>
-            <j-el class="btn">Users</j-el>
-            <j-el class="btn">Messages</j-el>
+        <j-tray id="user-tray" class="tray">
+            <j-el class="btn fa fa-user lite-text" title="Users"></j-el>
+            <j-el class="btn fa fa-envelope lite-text" title="Messages"></j-el>
         </j-tray>
 
+<!-- [json-canvas] Welcome to Pi Reel Contribute -->
         <json-canvas id="welcome-canvas" class="display">
-            <svg id="_index[1]" width="800" height="680">
-                <text style="font-size: 65">
-                    <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">Welcome to mozSprint 2017!</tspan>
+            <svg id="welcome-svg" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
+                <text style="font-size: 65; width: 100%">
+                    <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        Pi Reel's Road to MozSprint
+                    </tspan>
+                </text>
+                <text style="font-size: 22; width: 100%">
+                    <tspan class="paragraph" x="15" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        The time is almost on us, June 1st and 2nd, and the Pi Reel project is in full swing, 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        getting geared up for the event.
+                    </tspan>
                 </text>
             </svg>
         </json-canvas>
 
-        <j-foot>
-            
+<!-- [footer] -->
+        <j-foot id="foot-banner" class="header paragraph">
+            <h3>Communication Channels</h3>
+            <j-el class="block h5">Pi Reel||Home</j-el>
+            <j-el class="block h5">Facebook</j-el>
+            <j-el class="block h5">Gitter</j-el>
+            <j-el class="block h5">Github</j-el>
+            <j-el class="block h5">Cloud Nine</j-el>
         </j-foot>
     </body>
 
+<!-- [load script] -->
+    <script type="text/javascript" src="js/load-contribute.js" async="true"></script>
 </html>
