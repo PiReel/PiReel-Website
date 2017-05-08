@@ -14,15 +14,11 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css"></link>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 
 <style type="text/css">
     #welcome-canvas{
-        width: 75%; height: 600px;
-        overflow-Y: scroll;
-    }
-    #roadmap-canvas{
-        width: 75%; height: 600px;
-        overflow-Y: scroll;
+        width: 100%; height: auto;
     }
 </style>
 
@@ -37,28 +33,149 @@
 
 <!-- [Header] -->
         <header id="index-banner" class="header">
-            <a href="https://pireel.github.io/PiReel-Website/"><img src="img/pireel.png" id="header-logo" class="logo"></img></a>
+            <a class="inline-block h5" href="https://pireel.github.io/PiReel-Website/"><img src="img/pireel.png" id="header-logo" class="logo"></img></a>
+            <j-tray id="banner-tray" class="banner-tray inline-block paragraph">
+                <a class="block h5" href="https://pireel.github.io/PiReel-Core/"><img src="img/pireel-icon.svg" height="16px" width="auto"></img> ://Pi.Reel.Webapp</a>
+                <a class="block h5" href="https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico" height="16px" width="auto"></img> ://Pi.Reel.Docs</a>
+                <a class="block h5" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" height="16px" width="auto"></img> ://Planner.Sheet</a>
+            </j-tray>
         </header>
 
         <j-tray id="user-tray" class="tray">
             <j-el class="btn fa fa-user lite-text" title="Users"></j-el>
             <j-el class="btn fa fa-envelope lite-text" title="Messages"></j-el>
+            <label class="lite-text" for="blog-selection">Blogs: </label>
+            <select>
+                <option value="Pi Reel's Journey">MozSprint 2017 Talk</option>
+                <option value="Pi Reel's Application Features">Pi Reel, DOCS</option>
+            </select>
         </j-tray>
 
 <!-- [json-canvas] Welcome to Pi Reel Contribute -->
         <json-canvas id="welcome-canvas" class="display">
-            <svg id="welcome-svg" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
-                <text style="font-size: 65; width: 100%">
+            <svg id="road_to_mozsprint-blog" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
+<!-- [Blog Title] -->
+                <text class="blog title" style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        Pi Reel's Road to MozSprint
+                        MozSprint 2017 Talk!
                     </tspan>
                 </text>
-                <text style="font-size: 22; width: 100%">
-                    <tspan class="paragraph" x="15" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+
+<!-- [Blog Title] -->
+                <text class="blog paragraph" style="width: 100%">
+                    <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         The time is almost on us, June 1st and 2nd, and the Pi Reel project is in full swing, 
                     </tspan>
                     <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        getting geared up for the event.
+                        getting geared up for the MozSprint event. We hope to spark conversation about web 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="160" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        technologies being a catalyst for people's ideas and how Pi Reel fits into this   
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="185" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        picture.
+                    </tspan>
+                </text>
+
+<!-- [Blog Drawing][light rays] -->
+                <g>
+                    <path stroke="rgb(255,255,150)" stroke-width="6" fill="none"
+                        d="M75,200 L375,180 
+                           M75,215 L460,195 
+                           M75,230 L475,230 
+                           M65,245 L425,260"></path>
+                    <path stroke="rgb(255,255,200)" stroke-width="2" fill="none"
+                        d="M65,190 L375,180 
+                           M75,205 L460,195 
+                           M75,220 L475,230 
+                           M75,235 L425,260"></path>
+                </g>
+<!-- [Blog Drawing][light bulb] -->
+                <g>
+                    <path stroke="rgb(255,255,185)" stroke-width="6" fill="none"
+                        d="M75,275 L60,250 
+                           C0,250 30,210 50,200 75,215 55,225 50,227"></path>
+
+                </g>
+                <g>
+                    <path stroke="rgb(135,135,135)" stroke-width="6" fill="none"
+                        d="M65,280 L90,265"></path>
+                    <path stroke="rgb(135,135,135)" stroke-width="3" fill="none"
+                        d="M75,285 L90,275"></path>
+                    <circle cx="86" cy="286" r="3"
+                        stroke="rgb(200,200,185)" stroke-width="2" fill="rgb(225,225,185)"></circle>
+                </g>
+
+<!-- [Blog Article] -->
+                <text class="blog paragraph" style="font-size: 22; width: 100%">
+                    <tspan class="paragraph" x="20" y="305" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        My own expierence working out in different industries, that range from: class a driver 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="330" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                         to machine operator. It's very obvious to me that often times companies large and small  
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="355" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        don't pay attention to training programs involving web technologies and other related  
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="380" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        computer sciences tech.  Programs involving training usually come about at companies
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="405" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        as a result of mistakes being made. A lot of those mistakes that are made could be 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="430" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        prevented if they had a better training system or a more effecient way to communicate 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="455" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        ideas, other than the anonymous help box you put a sheet of paper in.
+                    </tspan>
+                </text>
+
+<!-- [Blog Article] -->
+                <text class="blog paragraph" style="font-size: 22; width: 100%">
+                    <tspan class="paragraph" x="20" y="500" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        This seems to be the story of most all idustrial settings where you might find
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="525" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        yourself working at as a skilled laborer.
+                    </tspan>
+                    <tspan class="paragraph" x="20" y="565" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        At MozSprint we want to open peoples minds to new ways of thinking
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="590" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        and new technologies that help keep everything moving in the safe 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="615" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        direction. So join us to talk shop.
+                    </tspan>
+                    <tspan class="h5" x="25" y="645" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        For more information click <a class="block h5" xlink:href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing">here</a>!
+                    </tspan>
+                    <tspan class="paragraph" x="20" y="720" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        I look forward to seeing you at MozSprint. HAPPY ANIMATING!
+                    </tspan>
+                    <tspan class="h5 sub-title" x="30" y="760" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        ~Kip Omaha
+                    </tspan>
+                </text>
+
+            </svg>
+
+            <svg id="alpha_features" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
+                <text style="font-size: 65; width: 100%">
+                    <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        The Pi Reel, DOCS
+                    </tspan>
+                </text>
+                <text style="font-size: 22; width: 100%">
+                    <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        The application package being taken to mozsprint,is an alpha package with a ui, that 
+                    </tspan>
+                    <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        will feature a console for coding and another one for keyframes.
+                    </tspan>
+                    <tspan class="paragraph h5" x="15" y="165" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+                        Blog still in progress, please be patient.
                     </tspan>
                 </text>
             </svg>
@@ -67,12 +184,13 @@
 <!-- [footer] -->
         <j-foot id="foot-banner" class="header paragraph">
             <h3>Communication Channels</h3>
-            <j-el class="block h5">Pi Reel||Home</j-el>
-            <j-el class="block h5">Facebook</j-el>
-            <j-el class="block h5">Gitter</j-el>
-            <j-el class="block h5">Github</j-el>
-            <j-el class="block h5">Cloud Nine</j-el>
-        </j-foot>
+            <j-el class="block"><a class="h5" href="https://pireel.github.io/PiReel-Website/">Site <img src="img/pireel-icon.svg" height="16px" width="auto"></img></a> <j-el class="inline-block"> : "Home of the Pi Reel Project."</j-el></j-el>
+            <j-el class="block"><a class="h5" href="construction.html">Facebook</a> <strong class="fa fa-facebook-official"></strong> <j-el class="inline-block"> : Chat and connect online with Facebook</j-el></j-el>
+            <j-el class="block"><a class="h5" href="https://gitter.im/PiReel/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Gitter:</a> <img scr="//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico" height="16px" width="auto"></img><j-el class="inline-block">Chat and connect online with Gitter</j-el></j-el>
+            <j-el class="block"><a class="h5" href="">Github </a> <strong class="fa fa-github"></strong> <j-el class="inline-block"> : Keep in touch with our project files</j-el></j-el>
+            <j-el class="block"><a class="h5">Cloud Nine </a> <img src="https://ide.c9.io/favicon.ico" height="16px" width="auto"></img> <j-el class="inline-block"> : "Code online with Pi Reel Coders"</j-el></j-el>
+            <j-el><j-el><a href="https://github.com/PiReel/PiReel-Website/blob/master/LICENSE">Copyright, GNU General Public License v3.0</a></j-el>
+        </j-foot>/favicon.ico
     </body>
 
 <!-- [load script] -->

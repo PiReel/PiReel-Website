@@ -37,10 +37,26 @@ body{
 .btn{
   padding: 1px; margin: 0px 2px 0px 2px;
 }
+.banner-tray{
+    position: absolute;
+  }
 
 /* [text classes] */
 .lite-text{
-  color: rgba(215,215,215,1);
+  color: rgba(215,215,215,1); stroke: rgba(215,215,215,1); fill: rgba(75,75,85,1);
+}
+.dark-text{
+  color: rgba(75,75,85,1); stroke: rgba(75,75,85,1); fill: rgba(75,75,85,1);
+}
+
+.steel-text{
+  color: rgba(175,175,185,1); stroke: rgba(175,175,185,1); fill: rgba(175,175,185,1);
+}
+.lite-outline{
+  stroke: rgba(175,175,185,1); 
+}
+.dark-outline{
+  stroke: rgba(75,75,85,1); 
 }
 .paragraph{
   font-size: 18px;
@@ -53,32 +69,39 @@ body{
   text-decoration: underline;
 }
 
-/* [img classes] */
+/* [media qeuries] */
 @media screen and (min-width: 160px){
   .logo{
     width: 100%; height: auto;
-    
+  }
+  .banner-tray{
+    height: 10px;
   }
 }
 @media screen and (min-width: 800px){
   .logo{
     width: 50%; height: auto;
-    
+  }
+  .banner-tray{
+    left: 0px; top: 0px; width: 30%; height: auto;
   }
 }
 @media screen and (min-width: 640px){
   .logo{
     width: 50%; height: auto;
-    
   }
 }
 @media screen and (min-width: 360px){
   .logo{
     width: 50%; height: auto;
-    
+  }
+  .banner-tray{
+    left: 815px;
   }
 }
 
-/* [svg] */
-
+/* [platform classes] */
+.google-sheets{
+  background-image: url(https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png);
+}
 
