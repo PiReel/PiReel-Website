@@ -8,6 +8,22 @@ body{
     font-size:1vw;
 }
 
+/* [xhtml] */
+j-tray{
+  display: block; overflow: hidden;
+}
+j-select{
+    position: relative;
+    display: inline-block; overflow-Y: hidden; overflow-X: hidden; 
+    background-color: rgb(255,255,255);
+}
+j-option{
+  position: relative;
+  width: 100%; height: auto; 
+  display: block; overflow: hidden;
+  background-color: rgb(255,255,255);
+}
+
 /* [utility classes] */
 .memory{
   position: fixed; left: 0px; top: 0px; width: 0px; height: 0px;
@@ -78,25 +94,31 @@ body{
     height: 10px;
   }
 }
-@media screen and (min-width: 800px){
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 0px; top: 0px; width: 30%; height: auto;
-  }
-}
-@media screen and (min-width: 640px){
-  .logo{
-    width: 50%; height: auto;
-  }
-}
+
 @media screen and (min-width: 360px){
   .logo{
     width: 50%; height: auto;
   }
   .banner-tray{
-    left: 815px;
+    left: 815px; top: 30px;
+  }
+}
+
+@media screen and (min-width: 640px){
+  .logo{
+    width: 50%; height: auto;
+  }
+}
+
+@media screen and (min-width: 800px){
+  body{
+    font-size: 1.75vw;
+}
+  .logo{
+    width: 50%; height: auto;
+  }
+  .banner-tray{
+    left: 815px;; top: 2.75vw; width: 30%; height: auto;
   }
 }
 

@@ -20,6 +20,18 @@
     #welcome-canvas{
         width: 100%; height: auto;
     }
+    #user-tray{
+        position: relative; top: 0px; width: 100%; height: auto;
+        overflow: hidden;
+    }
+    #top-tray{
+        position: relative; width: 100%; height: auto;
+        overflow: hidden;
+    }
+    #blog_select{
+        position: relative; top: 5px; height: 1.75vw; width: 50%; 
+        border: groove 2px rgb(98,98,98); background: white;
+    }
 </style>
 
     </head>
@@ -45,15 +57,15 @@
             <j-el class="btn fa fa-user lite-text" title="Users"></j-el>
             <j-el class="btn fa fa-envelope lite-text" title="Messages"></j-el>
             <label class="lite-text" for="blog-selection">Blogs: </label>
-            <select>
-                <option value="Pi Reel's Journey">MozSprint 2017 Talk</option>
-                <option value="Pi Reel's Application Features">Pi Reel, DOCS</option>
-            </select>
+            <j-select id="blog_select" class="selection">
+                <j-option value="Pi Reel's Journey"><a href="#mozsprint_talk-blog">MozSprint 2017 Talk</a></j-option>
+                <j-option value="Pi Reel's Application Features"><a href="#alpha_features">Pi Reel, DOCS</a></j-option>
+            </j-select>
         </j-tray>
 
 <!-- [json-canvas] Welcome to Pi Reel Contribute -->
         <json-canvas id="welcome-canvas" class="display">
-            <svg id="road_to_mozsprint-blog" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
+            <svg id="mozsprint_talk-blog" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
 <!-- [Blog Title] -->
                 <text class="blog title" style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
@@ -159,7 +171,7 @@
                     </tspan>
                 </text>
 
-            </svg>
+            </svg><br>
 
             <svg id="alpha_features" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
                 <text style="font-size: 65; width: 100%">
@@ -190,9 +202,9 @@
             <j-el class="block"><a class="h5" href="">Github </a> <strong class="fa fa-github"></strong> <j-el class="inline-block"> : Keep in touch with our project files</j-el></j-el>
             <j-el class="block"><a class="h5">Cloud Nine </a> <img src="https://ide.c9.io/favicon.ico" height="16px" width="auto"></img> <j-el class="inline-block"> : "Code online with Pi Reel Coders"</j-el></j-el>
             <j-el><j-el><a href="https://github.com/PiReel/PiReel-Website/blob/master/LICENSE">Copyright, GNU General Public License v3.0</a></j-el>
-        </j-foot>/favicon.ico
+        </j-foot>
     </body>
 
 <!-- [load script] -->
-    <script type="text/javascript" src="js/load-contribute.js" async="true"></script>
+    <script type="text/javascript" src="node_modules/x-tag/dist/jx.js" async="true"></script>
 </html>
