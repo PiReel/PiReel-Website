@@ -17,63 +17,98 @@
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 
 <style type="text/css">
+@media screen and (min-width: 860px){
+    .logo{
+        width: 25%;
+    }
     #welcome-canvas{
         width: 100%; height: auto;
+        background-color: white;
     }
     #user-tray{
-        position: relative; top: 0px; width: 100%; height: auto;
-        overflow: hidden;
+        position: fixed; top: 27.5%; left: 0px; z-index: 10; width: 100%; height: 40px;
+        padding: 0px;
+        overflow: visible;
     }
     #top-tray{
-        position: relative; width: 100%; height: auto;
+        position: fixed; width: 100%; height: auto; z-index: 10;
         overflow: hidden;
     }
     #blog_select{
-        position: relative; top: 5px; height: 1.75vw; width: 50%; 
-        border: groove 2px rgb(98,98,98); background: white;
+        position: relative; height: 1.75vw; width: 30%; left: 160px; 
+        background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
     }
+    #user-btn{
+        position: absolute; left: 0px; top: 0px; 
+    }
+    #msg-btn{
+        position: absolute; left: 30px; top: 0px; 
+    }
+    #selection_label{
+        position: absolute; left: 80px; top: 0px; 
+    }
+    #index-banner{
+        top: 2.5%; z-index: 10;
+        background: rgba(255,255,255,.7);
+    }
+    #banner-tray{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1960px){
+    .blog{
+        position: relative; width: 25%; top: 275px;
+        margin: 0%;
+    }
+    .paragraph{
+        font-size: 24px;
+    }
+}
 </style>
 
     </head>
 
     <body>
-<!-- [Top Tray Menu] -->
+<!-- [j-tray] -->
         <j-tray id="top-tray" class="tray">
             <j-el class="fa fa-gears btn lite-text" title="Settings"></j-el>
             <j-el class="fa fa-eye btn lite-text" title="Preferences"></j-el>
         </j-tray>
 
-<!-- [Header] -->
-        <header id="index-banner" class="header">
-            <a class="inline-block h5" href="https://pireel.github.io/PiReel-Website/"><img src="img/pireel.png" id="header-logo" class="logo"></img></a>
-            <j-tray id="banner-tray" class="banner-tray inline-block paragraph">
-                <a class="block h5" href="https://pireel.github.io/PiReel-Core/"><img src="img/pireel-icon.svg" height="16px" width="auto"></img> ://Pi.Reel.Webapp</a>
-                <a class="block h5" href="https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico" height="16px" width="auto"></img> ://Pi.Reel.Docs</a>
-                <a class="block h5" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" height="16px" width="auto"></img> ://Planner.Sheet</a>
-            </j-tray>
-        </header>
+<!-- [j-header] -->
+        <j-header id="index-banner" class="header">
+            <a id="logo-button" class="inline-block h5" href="https://pireel.github.io/PiReel-Website/">
+                <img src="img/pireel.png" id="header-logo" class="logo"></img></a>
 
-        <j-tray id="user-tray" class="tray">
-            <j-el class="btn fa fa-user lite-text" title="Users"></j-el>
-            <j-el class="btn fa fa-envelope lite-text" title="Messages"></j-el>
-            <label class="lite-text" for="blog-selection">Blogs: </label>
-            <j-select id="blog_select" class="selection">
-                <j-option value="Pi Reel's Journey"><a href="#mozsprint_talk-blog">MozSprint 2017 Talk</a></j-option>
-                <j-option value="Pi Reel's Application Features"><a href="#alpha_features">Pi Reel, DOCS</a></j-option>
+            <j-tray id="banner-tray" class="abs tray paragraph lite-text" for="#logo-button">
+                <a class="inline-block " href="https://pireel.github.io/PiReel-Core/"><img src="img/pireel-icon.svg" height="16px" width="auto"></img> <strong class="inline-block"> :// Pi.Reel.Webapp</strong></a> <strong class="sub-title"> || </strong>  
+                <a class="inline-block" href="https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico" height="16px" width="auto"></img> ://Pi.Reel.Docs</a> <strong class="sub-title"> || </strong> 
+                <a class="inline-block" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" height="16px" width="auto"></img> ://Planner.Sheet</a>
+            </j-tray>
+        </j-header>
+
+<!-- [j-tray] -->
+        <j-tray id="user-tray" class="tray" for="#index-banner">
+            <j-el id="user-btn" class="btn fa fa-user lite-text" title="Users"></j-el>
+            <j-el id="msg-btn" class="btn fa fa-envelope lite-text" title="Messages"></j-el>
+
+            <label id="selection_label" class="lite-text" for="blog-selection">Blogs: </label>
+            <j-select data-href="blogs/writers.json" data-get="$pireel.current.events" id="blog_select" class="selection">
+                <j-option class="lite-text">None Selected</j-option>
+                <j-option><a href="#mozsprint_talk-blog">MozSprint 2017 Talk</a></j-option>
+                <j-option><a href="#alpha_features">Pi Reel, DOCS</a></j-option>
             </j-select>
         </j-tray>
 
-<!-- [json-canvas] Welcome to Pi Reel Contribute -->
+<!-- [json-canvas] -->
         <json-canvas id="welcome-canvas" class="display">
-            <svg id="mozsprint_talk-blog" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
-<!-- [Blog Title] -->
+            <svg id="mozsprint_talk-blog" class="canvas blog" viewBox="0 0 1000 1250">
                 <text class="blog title" style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         MozSprint 2017 Talk!
                     </tspan>
                 </text>
 
-<!-- [Blog Title] -->
                 <text class="blog paragraph" style="width: 100%">
                     <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         The time is almost on us, June 1st and 2nd, and the Pi Reel project is in full swing, 
@@ -89,7 +124,6 @@
                     </tspan>
                 </text>
 
-<!-- [Blog Drawing][light rays] -->
                 <g>
                     <path stroke="rgb(255,255,150)" stroke-width="6" fill="none"
                         d="M75,200 L375,180 
@@ -102,7 +136,7 @@
                            M75,220 L475,230 
                            M75,235 L425,260"></path>
                 </g>
-<!-- [Blog Drawing][light bulb] -->
+
                 <g>
                     <path stroke="rgb(255,255,185)" stroke-width="6" fill="none"
                         d="M75,275 L60,250 
@@ -118,7 +152,6 @@
                         stroke="rgb(200,200,185)" stroke-width="2" fill="rgb(225,225,185)"></circle>
                 </g>
 
-<!-- [Blog Article] -->
                 <text class="blog paragraph" style="font-size: 22; width: 100%">
                     <tspan class="paragraph" x="20" y="305" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         My own expierence working out in different industries, that range from: class a driver 
@@ -143,7 +176,6 @@
                     </tspan>
                 </text>
 
-<!-- [Blog Article] -->
                 <text class="blog paragraph" style="font-size: 22; width: 100%">
                     <tspan class="paragraph" x="20" y="500" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         This seems to be the story of most all idustrial settings where you might find
@@ -173,7 +205,7 @@
 
             </svg><br>
 
-            <svg id="alpha_features" class="canvas" width="800" height="1000" viewBox="0 0 1000 1250">
+            <svg id="alpha_features" class="canvas blog" viewBox="0 0 1000 1250">
                 <text style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         The Pi Reel, DOCS
@@ -196,15 +228,36 @@
 <!-- [footer] -->
         <j-foot id="foot-banner" class="header paragraph">
             <h3>Communication Channels</h3>
-            <j-el class="block"><a class="h5" href="https://pireel.github.io/PiReel-Website/">Site <img src="img/pireel-icon.svg" height="16px" width="auto"></img></a> <j-el class="inline-block"> : "Home of the Pi Reel Project."</j-el></j-el>
-            <j-el class="block"><a class="h5" href="construction.html">Facebook</a> <strong class="fa fa-facebook-official"></strong> <j-el class="inline-block"> : Chat and connect online with Facebook</j-el></j-el>
-            <j-el class="block"><a class="h5" href="https://gitter.im/PiReel/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Gitter:</a> <img scr="//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico" height="16px" width="auto"></img><j-el class="inline-block">Chat and connect online with Gitter</j-el></j-el>
-            <j-el class="block"><a class="h5" href="">Github </a> <strong class="fa fa-github"></strong> <j-el class="inline-block"> : Keep in touch with our project files</j-el></j-el>
-            <j-el class="block"><a class="h5">Cloud Nine </a> <img src="https://ide.c9.io/favicon.ico" height="16px" width="auto"></img> <j-el class="inline-block"> : "Code online with Pi Reel Coders"</j-el></j-el>
-            <j-el><j-el><a href="https://github.com/PiReel/PiReel-Website/blob/master/LICENSE">Copyright, GNU General Public License v3.0</a></j-el>
+            <j-el class="block">
+                <a class="h5" href="https://pireel.github.io/PiReel-Website/">Site <img src="img/pireel-icon.svg" height="16px" width="auto"></img></a>
+                <j-el class="inline-block"> : "Home of the Pi Reel Project."</j-el>
+            </j-el>
+            <j-el class="block">
+                <a class="h5" href="construction.html">Facebook</a> 
+                <strong class="fa fa-facebook-official"></strong> 
+                <j-el class="inline-block"> : Chat and connect online with Facebook</j-el>
+            </j-el>
+            <j-el class="block">
+                <a class="h5" href="https://gitter.im/PiReel/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Gitter:</a> 
+                <img scr="//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico" height="16px" width="auto"></img>
+                <j-el class="inline-block">Chat and connect online with Gitter</j-el>
+            </j-el>
+            <j-el class="block">
+                <a class="h5" href="">Github </a> 
+                <strong class="fa fa-github"></strong> 
+                <j-el class="inline-block"> : Keep in touch with our project files</j-el>
+            </j-el>
+            <j-el class="block">
+                <a class="h5">Cloud Nine </a> 
+                <img src="https://ide.c9.io/favicon.ico" height="16px" width="auto"></img> 
+                <j-el class="inline-block"> : "Code online with Pi Reel Coders"</j-el>
+            </j-el>
+            <j-el>
+                <a href="https://github.com/PiReel/PiReel-Website/blob/master/LICENSE">Copyright, GNU General Public License v3.0</a>
+            </j-el>
         </j-foot>
     </body>
 
 <!-- [load script] -->
-    <script type="text/javascript" src="node_modules/x-tag/dist/jx.js" async="true"></script>
+    <script type="text/javascript" src="node_modules/x-tag/dist/x-tag-core.js" async="true"></script>
 </html>

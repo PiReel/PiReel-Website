@@ -5,23 +5,76 @@
 
 /* [html] */
 body{
-    font-size:1vw;
+    font-size: 16px;
+}
+a:link{
+  color: rgba(215,215,215,1); stroke: rgba(215,215,215,1); fill: rgba(75,75,85,1);
+}
+a:visited{
+  color: rgba(255,175,17,1); stroke: rgba(255,215,215,1); fill: rgba(175,75,85,1);
+}
+a:hover{
+  color: rgba(165,165,255,1); stroke: rgba(165,165,255,1); fill: rgba(65,65,125,1);
+}
+a:active{
+  background-color: white;
+  color: rgba(255,17,17,1); stroke: rgba(255,17,17,1); fill: rgba(175,75,85,1);
 }
 
 /* [xhtml] */
+j-header{
+  position: fixed; top: 0px; left: 0px;
+  margin: 2%;
+}
 j-tray{
-  display: block; overflow: hidden;
+  padding: 0px 10px 0px 10px;
+  display: inline-block; box-sizing: border-box;
+  overflow-Y: hidden; overflow-X: hidden;
+  background-color: rgba(255,255,255,.55); border: ridge 2px rgb(98,98,98);
 }
 j-select{
-    position: relative;
-    display: inline-block; overflow-Y: hidden; overflow-X: hidden; 
-    background-color: rgb(255,255,255);
+    position: relative; height: 100%;
+    display: inline-block; box-sizing: border-box;
+    overflow-Y: hidden; overflow-X: hidden;
+    background-color: rgba(255,255,255,.9);
 }
 j-option{
   position: relative;
-  width: 100%; height: auto; 
-  display: block; overflow: hidden;
-  background-color: rgb(255,255,255);
+  width: 91%; height: 100%; left: 0%; top: 0%;
+  padding-left: 1%;
+  display: block; box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(100,100,100,.75);
+}
+j-toggle{
+  position: absolute; left: 92%; top: 0%;
+  padding: 0px 5px 0px 5px; 
+  border: outset 2px; border-radius: 100%;
+  display: inline-block; box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(255,177,17,1);
+  font-size: 1.35vw;
+  color: rgb(95,95,115);
+}
+j-toggle:hover{
+  position: absolute; left: 92%; top: 0%;
+  padding: 0px 5px 0px 5px; 
+  border: outset 2px; border-radius: 100%;
+  display: inline-block; box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(100,175,100,1);
+  font-size: 1.35vw;
+  color: rgb(95,95,115);
+}
+j-toggle:active{
+  position: absolute; left: 92%; top: 0%;
+  padding: 0px 5px 0px 5px; 
+  border: outset 2px; border-radius: 100%;
+  display: inline-block; box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(255,255,17,1);
+  font-size: 1.35vw;
+  color: rgb(95,95,115);
 }
 
 /* [utility classes] */
@@ -31,9 +84,11 @@ j-option{
 }
 .tray{
   position: relative; left: auto; top: auto; width: auto; height: auto;
-  overflow-X: hidden; overflow-Y: scroll;
-  background: rgba(77,77,77,1);
-  border: outset 2px rgba(177,177,177,1);
+  overflow-X: hidden; overflow-Y: hidden; 
+  background: rgba(147,147,147,1); border: groove 2px rgba(177,177,177,1);
+}
+.circle{
+  border-radius: 100%;
 }
 .display{
   margin: 5px 0px 5px 0px;
@@ -46,25 +101,31 @@ j-option{
 .inline-block{
   display: inline-block;
 }
+.flt-right-top{
+  top: 0px;
+  float: right;
+}
 .canvas{
   display: inline-block;
   background: rgba(215,215,255,1); fill: rgba(240,240,255,1);
 }
+.blog{
+  margin: 2.5% 5% 2.5% 5%;
+}
 .btn{
   padding: 1px; margin: 0px 2px 0px 2px;
 }
-.banner-tray{
-    position: absolute;
-  }
+.abs{
+  position: absolute;
+}
 
 /* [text classes] */
 .lite-text{
-  color: rgba(215,215,215,1); stroke: rgba(215,215,215,1); fill: rgba(75,75,85,1);
+  color: rgba(189,189,189,1); stroke: rgba(189,189,189,1); fill: rgba(75,75,85,1);
 }
 .dark-text{
   color: rgba(75,75,85,1); stroke: rgba(75,75,85,1); fill: rgba(75,75,85,1);
 }
-
 .steel-text{
   color: rgba(175,175,185,1); stroke: rgba(175,175,185,1); fill: rgba(175,175,185,1);
 }
@@ -105,15 +166,46 @@ j-option{
 }
 
 @media screen and (min-width: 640px){
+  body{
+    font-size: 1.4vw;
+  }
   .logo{
     width: 50%; height: auto;
+  }
+  .banner-tray{
+    left: 815px;; top: 2.75vw; width: 30%; height: auto;
   }
 }
 
 @media screen and (min-width: 800px){
   body{
-    font-size: 1.75vw;
+    font-size: 1.4vw;
+  }
+  .logo{
+    width: 50%; height: auto;
+  }
+  .banner-tray{
+    left: 815px;; top: 2.75vw; width: 30%; height: auto;
+  }
 }
+
+@media screen and (max-width: 800px){
+  body{
+    font-size: 1.4vw;
+  }
+  .logo{
+    width: 50%; height: auto;
+  }
+  .banner-tray{
+    left: 815px;; top: 2.75vw; width: 30%; height: auto;
+  }
+}
+
+/* [TV] */
+@media screen and (max-width: 1960px){
+  body{
+    font-size: 1.4vw;
+  }
   .logo{
     width: 50%; height: auto;
   }

@@ -1,0 +1,18 @@
+{
+"pireel":
+    {
+    "current":
+        {
+        "0":
+            {
+            "title": "MozSprint 2017 Talk",
+            "file_name": "pireel-1.svg",
+            "author" : "Steven Van Sant",
+            "coauthor" : null,
+            "editor"  null,
+            "published": ["",""],
+            "labels": ["mozilla", "activism", "economics", "growth", "business", "logistics", "solutions"]
+            }
+        }
+    }
+}
