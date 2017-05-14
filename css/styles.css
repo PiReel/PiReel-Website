@@ -219,3 +219,8 @@ j-toggle:active{
   background-image: url(https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png);
 }
 
+#footer-banner{
+  position: fixed; left: 0%;top: 98%; width: 100%;
+  background: rgba(147,147,147,1);
+  font-size: .85vw;
+}
