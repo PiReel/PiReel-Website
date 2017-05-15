@@ -17,61 +17,65 @@
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 
 <!-- [load script] -->
-        <script type="text/javascript" src="js/x-tag-pi-reel.js"></script>
+        <!-- <script type="text/javascript" src="js/x-tag-pi-reel.js"></script> -->
+        <script type="text/javascript" src="node_modules/x-tag/dist/x-tag-core.js"></script>
 
 <!-- [stylesheet] -->
 <style type="text/css">
 @media screen and (min-width: 860px){
-    .logo{
-        width: 25%;
-    }
-    #footer-banner{
-        position: fixed; left: 0%;top: 98%; width: 100%;
-        background: rgba(147,147,147,1);
-        font-size: .85vw;
-    }
-    #welcome-canvas{
-        width: 100%; height: auto;
-        background-color: white;
-    }
-    #user-tray{
-        position: fixed; top: 25.5%; left: 0px; z-index: 10; width: 100%; height: 40px;
-        padding: 0px;
-        overflow: visible;
-    }
-    #top-tray{
-        position: fixed; width: 100%; height: auto; z-index: 10;
-        overflow: hidden;
-    }
-    #blog_select{
-        position: relative; height: 1.75vw; width: 30%; left: 160px; 
-        background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
-    }
-    #user-btn{
-        position: absolute; left: 0px; top: 0px; 
-    }
-    #msg-btn{
-        position: absolute; left: 30px; top: 0px; 
-    }
-    #selection_label{
-        position: absolute; left: 80px; top: 0px; 
-    }
-    #index-banner{
-        top: 2.5%; z-index: 10;
-        background: rgba(255,255,255,.7);
-    }
-    #banner-tray{
-        font-size: 18px;
-    }
+    
+  
 }
 @media screen and (max-width: 1960px){
-    .blog{
-        position: relative; width: 25%; top: 275px;
-        margin: 0%;
-    }
-    .paragraph{
-        font-size: 24px;
-    }
+  .blog{
+    position: relative; width: 30%; height: calc(100% - 25px); top: 0px;
+    margin: 0%;
+  }
+  .paragraph{
+    font-size: 20px;
+  }
+  .logo{
+    width: 25%;
+  }
+  #footer-banner{
+    position: fixed; left: 0%;top: 98%; width: 100%;
+    background: rgba(147,147,147,1);
+    font-size: .85vw;
+  }
+  #blog-canvas{
+    position: fixed; top: 30%; left: 0%; width: 100%; height: 67%;
+    background-color: rgba(145,145,245,.85);
+    overflow-X: scroll;
+  }
+  #user-tray{
+    position: fixed; top: 25.5%; left: 0px; z-index: 10; width: 100%; height: 40px;
+    padding: 0px;
+    overflow: visible;
+  }
+  #top-tray{
+    position: fixed; width: 100%; height: auto; z-index: 10;
+    overflow: hidden;
+  }
+  #blog_select{
+    position: relative; height: 1.75vw; width: 30%; left: 160px; 
+    background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
+  }
+  #user-btn{
+    position: absolute; left: 0px; top: 0px; 
+  }
+  #msg-btn{
+    position: absolute; left: 30px; top: 0px; 
+  }
+  #selection_label{
+    position: absolute; left: 80px; top: 0px; 
+  }
+  #index-banner{
+    top: 2.5%; z-index: 10;
+    background: rgba(255,255,255,.7);
+  }
+  #banner-tray{
+    font-size: 18px;
+  }
 }
 </style>
     </head>
@@ -101,16 +105,16 @@
             <j-el id="msg-btn" class="btn fa fa-envelope lite-text" title="Messages"></j-el>
 
             <label id="selection_label" class="lite-text" for="blog-selection">Blogs: </label>
-            <j-select data-href="blogs/writers.json" data-get="$pireel.current.events" id="blog_select" class="selection">
-                <j-option class="lite-text">None Selected</j-option>
-                <j-option><a href="#mozsprint_talk-blog">MozSprint 2017 Talk</a></j-option>
-                <j-option><a href="#alpha_features">Pi Reel, DOCS</a></j-option>
+            <j-select visibility="hidden" data-type="blog/svg" data-href="url(blogs/writers.json)" data-get="$pireel.current;" id="blog_select" class="selection lite-text">
+                <j-option><a>None Selected</a></j-option>
+                <j-option><a>MozSprint 2017 Talk</a></j-option>
+                <j-option><a>Pi Reel, DOCS</a></j-option>
             </j-select>
         </j-tray>
 
 <!-- [json-canvas] -->
-        <json-canvas id="welcome-canvas" class="display">
-            <svg id="mozsprint_talk-blog" class="canvas blog" viewBox="0 0 1000 1250">
+        <json-canvas id="blog-canvas" class="display">
+            <svg id="mozsprint_talk-blog" class="canvas blog" viewBox="0 0 750 948">
                 <text class="blog title" style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         MozSprint 2017 Talk!
@@ -211,9 +215,9 @@
                     </tspan>
                 </text>
 
-            </svg><br>
+            </svg>
 
-            <svg id="alpha_features" class="canvas blog" viewBox="0 0 1000 1250">
+            <svg id="alpha_features" class="canvas blog" viewBox="0 0 750 948">
                 <text style="font-size: 65; width: 100%">
                     <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
                         The Pi Reel, DOCS
@@ -231,6 +235,12 @@
                     </tspan>
                 </text>
             </svg>
+            
+            <form id="blog_form" class="canvas blog">
+                <fieldset class="abs tray inline-block">
+                    <legend class="tray lite-text">Pi Reel's Open Blog</legend>
+                </fieldset>
+            </form>
         </json-canvas>
 
 <!-- [footer] -->
