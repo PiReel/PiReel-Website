@@ -1,18 +1,25 @@
 {
-"pireel":
-    {
-    "current":
-        {
-        "0":
-            {
-            "title": "MozSprint 2017 Talk",
-            "file_name": "pireel-1.svg",
-            "author" : "Steven Van Sant",
-            "coauthor" : null,
-            "editor"  null,
-            "published": ["",""],
-            "labels": ["mozilla", "activism", "economics", "growth", "business", "logistics", "solutions"]
-            }
-        }
-    }
+	"pireel": {
+		"current": [{
+				"title": "MozSprint 2017 Talk",
+				"url_path": "blogs/pireel/pireel-1.svg",
+				"author": "Steven Van Sant",
+				"coauthor": null,
+				"editor": null,
+				"published": "In progress",
+				"featured": true,
+				"labels": ["mozilla", "mozsprint2017"]
+			},
+			{
+				"title": "Pi Reel DOCS",
+				"file_name": "pireel-2.svg",
+				"author": "Steven Van Sant",
+				"coauthor": null,
+				"editor": null,
+				"published": "In progress",
+				"featured": false,
+				"labels": ["coding", "documentation", "open collaboration", "blogs", "open docs"]
+			}
+		]
+	}
 }

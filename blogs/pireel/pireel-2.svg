@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="alpha_features" class="canvas blog" viewBox="0 0 750 948">
+    <text style="font-size: 65; width: 100%">
+        <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            The Pi Reel, DOCS
+        </tspan>
+    </text>
+    <text style="font-size: 22; width: 100%">
+        <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            The application package being taken to mozsprint,is an alpha package with a ui, that 
+        </tspan>
+        <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            will feature a console for coding and another one for keyframes.
+        </tspan>
+        <tspan class="paragraph h5" x="15" y="165" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            Blog still in progress, please be patient.
+        </tspan>
+    </text>
+</svg>

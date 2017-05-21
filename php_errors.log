@@ -1,0 +1,10 @@
+[16-May-2017 01:36:43 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/lib/blog-vx1.php on line 3
+[16-May-2017 01:36:43 UTC] PHP Stack trace:
+[16-May-2017 01:36:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/lib/blog-vx1.php:0
+[16-May-2017 01:37:08 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/lib/blog-vx1.php on line 3
+[16-May-2017 01:37:08 UTC] PHP Stack trace:
+[16-May-2017 01:37:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/lib/blog-vx1.php:0
+[16-May-2017 01:38:23 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/lib/blog-vx1.php on line 3
+[16-May-2017 01:38:23 UTC] PHP Stack trace:
+[16-May-2017 01:38:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/lib/blog-vx1.php:0
+[20-May-2017 01:42:06 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/ubuntu/workspace/lib/blog-vx1.php on line 6

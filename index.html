@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype HTML>
 <html>
     <head>
 
@@ -8,272 +8,259 @@
 
         <meta charset="utf-8"></meta>
         <meta name="description" content="Pi reel."></meta>
-        <meta name="keywords" content="computer science, cgi, json, json markup, web, social network, open source"></meta>
+        <meta name="keywords" content="Git Hub, repo, animation, science, engineering, fits, pi reel"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     
-        <link rel="stylesheet" href="css/styles.css" type="text/css"></link>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
-<!-- [load script] -->
-        <script type="text/javascript" src="js/x-tag-pi-reel.js"></script>
-        <!-- <script type="text/javascript" src="node_modules/x-tag/dist/x-tag-core.js"></script> -->
-
+        <title>pireel@mozsprint2017</title>
 <!-- [stylesheet] -->
 <style type="text/css">
-@media screen and (min-width: 860px){
-    
-  
+body{
+    background-image: url(img/gitpage-background.png);
+    background-attachment: fixed;
 }
-@media screen and (max-width: 1960px){
-  .blog{
-    position: relative; width: 30%; height: calc(100% - 25px); top: 0px;
-    margin: 0%;
-  }
-  .paragraph{
-    font-size: 20px;
-  }
-  .logo{
-    width: 25%;
-  }
-  #footer-banner{
-    position: fixed; left: 0%;top: 98%; width: 100%;
-    background: rgba(147,147,147,1);
-    font-size: .85vw;
-  }
-  #blog-canvas{
-    position: fixed; top: 30%; left: 0%; width: 100%; height: 67%;
-    background-color: rgba(145,145,245,.85);
-    overflow-X: scroll;
-  }
-  #user-tray{
-    position: fixed; top: 25.5%; left: 0px; z-index: 10; width: 100%; height: 40px;
-    padding: 0px;
-    overflow: visible;
-  }
-  #top-tray{
-    position: fixed; width: 100%; height: auto; z-index: 10;
-    overflow: hidden;
-  }
-  #blog_select{
-    position: relative; height: 1.75vw; width: 30%; left: 160px; 
-    background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
-  }
-  #user-btn{
-    position: absolute; left: 0px; top: 0px; 
-  }
-  #msg-btn{
-    position: absolute; left: 30px; top: 0px; 
-  }
-  #selection_label{
-    position: absolute; left: 80px; top: 0px; 
-  }
-  #index-banner{
-    top: 2.5%; z-index: 10;
-    background: rgba(255,255,255,.7);
-  }
-  #banner-tray{
-    font-size: 18px;
-  }
+@media screen and (max-width: 684px){
+    div{
+        width: 90%; 
+        display: block;
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        background: rgba(255,255,255,.25);
+    }
+    img{
+        width: 100%;
+    }
+    h1{
+        font-size: 2.25vw;
+    }
+    p{
+        width: 70%;
+        padding: 1vw;
+        margin-left: 15%;
+        margin-right: 25%;
+        font-size: 2vw;
+        text-align: center;
+        background: rgba(255,255,255,.5);
+    }
+    p  + ol{
+        margin-left: 15%;
+        text-align: left;
+        font-size: 2vw;
+        font-weight: bold;
+        list-style-position: inside;
+        background: rgba(255,255,255,.5);
+    }
+    li + ol{
+        margin-left: 0%;
+    }
+    header > h1{
+        position: absolute;
+        background: rgba(125,125,125,1);
+        color: rgba(255,177,17,1);
+        float: left;
+    }
+    h1 + a{
+        width: 25%;
+        height: auto;
+        display: inline-block;
+        background: rgba(255,255,255,.5);
+    }
+    h2{
+        font-size: 1.25vw;
+    }
+    nav{
+        margin: 5px;
+    }
+    nav a{
+        font-size: 1.15vw;
+        background: white;
+        font-weight: bold;
+        color: rgb(100,100,100);
+    }
+    nav a:hover{
+
+    }
+    a + strong{
+        font-size: 1.25vw;
+    }
+    footer{
+        width: 100%;
+        height: 300px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    .fa{
+        margin-right: 1vw;
+        font-size: 6vw;
+        float: left;
+    }
+    .c9{
+        width: 6vw; height: 6vw;
+        background: url("https://ide.c9.io/favicon.ico") no-repeat;
+        background-size: 95%;
+    }
+    .gitter{
+        width: 6vw; height: 6vw;
+        background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
+        background-size: 95%;
+    }
+}
+@media screen and (min-width: 1920px){
+    img{
+        width: 100%;
+    }
+    div{
+        width: 90%; 
+        display: block;
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        background: rgba(255,255,255,.25);
+    }
+    h1{
+        font-size: 1.75vw;
+    }
+    p{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 1.25vw;
+        text-align: center;
+        background: rgba(255,255,255,.5);
+    }
+    p  + ol{
+        margin-left: 30%;
+        text-align: left;
+        font-size: 1vw;
+        font-weight: bold;
+        list-style-position: inside;
+        background: rgba(255,255,255,.5);
+    }
+    li + ol{
+        margin-left: 2.5%;
+    }
+    header > h1{
+        position: absolute;
+        background: rgba(125,125,125,1);
+        color: rgba(255,177,17,1);
+        float: left;
+    }
+    h1 + a{
+        width: 25%;
+        height: auto;
+        display: inline-block;
+        background: rgba(255,255,255,.5);
+    }
+    h2{
+        font-size: 1.25vw;
+    }
+    nav{
+        margin: 5px;
+    }
+    nav a{
+        font-size: 1.15vw;
+        background: white;
+        font-weight: bold;
+        color: rgb(100,100,100);
+    }
+    nav a:hover{
+
+    }
+    a + strong{
+        font-size: 1.25vw;
+    }
+    footer{
+        width: 100%;
+        height: 300px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    .fa{
+        margin-right: 3px;
+        font-size: 3vw;
+        float: left;
+    }
+    .c9{
+        width: 50px; height: 50px;
+        background: url("https://ide.c9.io/favicon.ico") no-repeat;
+        background-size: 95%;
+    }
+    .gitter{
+        width: 2.75vw; height: 3vw;
+        background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
+        background-size: 95%;
+    }
+    
 }
 </style>
     </head>
 
     <body>
-<!-- [j-tray] -->
-        <j-tray id="top-tray" class="tray">
-            <j-el class="fa fa-gears btn lite-text" title="Settings"></j-el>
-            <j-el class="fa fa-eye btn lite-text" title="Preferences"></j-el>
-        </j-tray>
-
-<!-- [j-header] -->
-        <j-header id="index-banner" class="header">
-            <a id="logo-button" class="inline-block h5" href="https://pireel.github.io/PiReel-Website/">
-                <img src="img/pireel.png" id="header-logo" class="logo"></img></a>
-
-            <j-tray id="banner-tray" class="abs tray paragraph lite-text" for="#logo-button">
-                <a class="inline-block " href="https://pireel.github.io/PiReel-Core/"><img src="img/pireel-icon.svg" height="16px" width="auto"></img> <strong class="inline-block"> :// Pi.Reel.Webapp</strong></a> <strong class="sub-title"> || </strong>  
-                <a class="inline-block" href="https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico" height="16px" width="auto"></img> ://Pi.Reel.Docs</a> <strong class="sub-title"> || </strong> 
-                <a class="inline-block" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" height="16px" width="auto"></img> ://Planner.Sheet</a>
-            </j-tray>
-        </j-header>
-
-<!-- [j-tray] -->
-        <j-tray id="user-tray" class="tray" for="#index-banner">
-            <j-el id="user-btn" class="btn fa fa-user lite-text" title="Users"></j-el>
-            <j-el id="msg-btn" class="btn fa fa-envelope lite-text" title="Messages"></j-el>
-
-            <label id="selection_label" class="lite-text" for="blog-selection">Blogs: </label>
-            <j-select visibility="hidden" data-type="blog/svg" data-href="url(blogs/writers.json)" data-get="$pireel.current;" id="blog_select" class="selection lite-text">
-                <j-option><a>None Selected</a></j-option>
-                <j-option><a>MozSprint 2017 Talk</a></j-option>
-                <j-option><a>Pi Reel, DOCS</a></j-option>
-            </j-select>
-        </j-tray>
-
-<!-- [json-canvas] -->
-        <json-canvas id="blog-canvas" class="display">
-            <svg id="mozsprint_talk-blog" class="canvas blog" viewBox="0 0 750 948">
-                <text class="blog title" style="font-size: 65; width: 100%">
-                    <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        MozSprint 2017 Talk!
-                    </tspan>
-                </text>
-
-                <text class="blog paragraph" style="width: 100%">
-                    <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        The time is almost on us, June 1st and 2nd, and the Pi Reel project is in full swing, 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        getting geared up for the MozSprint event. We hope to spark conversation about web 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="160" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        technologies being a catalyst for people's ideas and how Pi Reel fits into this   
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="185" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        picture.
-                    </tspan>
-                </text>
-
-                <g>
-                    <path stroke="rgb(255,255,150)" stroke-width="6" fill="none"
-                        d="M75,200 L375,180 
-                           M75,215 L460,195 
-                           M75,230 L475,230 
-                           M65,245 L425,260"></path>
-                    <path stroke="rgb(255,255,200)" stroke-width="2" fill="none"
-                        d="M65,190 L375,180 
-                           M75,205 L460,195 
-                           M75,220 L475,230 
-                           M75,235 L425,260"></path>
-                </g>
-
-                <g>
-                    <path stroke="rgb(255,255,185)" stroke-width="6" fill="none"
-                        d="M75,275 L60,250 
-                           C0,250 30,210 50,200 75,215 55,225 50,227"></path>
-
-                </g>
-                <g>
-                    <path stroke="rgb(135,135,135)" stroke-width="6" fill="none"
-                        d="M65,280 L90,265"></path>
-                    <path stroke="rgb(135,135,135)" stroke-width="3" fill="none"
-                        d="M75,285 L90,275"></path>
-                    <circle cx="86" cy="286" r="3"
-                        stroke="rgb(200,200,185)" stroke-width="2" fill="rgb(225,225,185)"></circle>
-                </g>
-
-                <text class="blog paragraph" style="font-size: 22; width: 100%">
-                    <tspan class="paragraph" x="20" y="305" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        My own expierence working out in different industries, that range from: class a driver 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="330" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                         to machine operator. It's very obvious to me that often times companies large and small  
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="355" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        don't pay attention to training programs involving web technologies and other related  
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="380" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        computer sciences tech.  Programs involving training usually come about at companies
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="405" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        as a result of mistakes being made. A lot of those mistakes that are made could be 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="430" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        prevented if they had a better training system or a more effecient way to communicate 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="455" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        ideas, other than the anonymous help box you put a sheet of paper in.
-                    </tspan>
-                </text>
-
-                <text class="blog paragraph" style="font-size: 22; width: 100%">
-                    <tspan class="paragraph" x="20" y="500" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        This seems to be the story of most all idustrial settings where you might find
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="525" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        yourself working at as a skilled laborer.
-                    </tspan>
-                    <tspan class="paragraph" x="20" y="565" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        At MozSprint we want to open peoples minds to new ways of thinking
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="590" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        and new technologies that help keep everything moving in the safe 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="615" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        direction. So join us to talk shop.
-                    </tspan>
-                    <tspan class="h5" x="25" y="645" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        For more information click <a class="block h5" xlink:href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing">here</a>!
-                    </tspan>
-                    <tspan class="paragraph" x="20" y="720" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        I look forward to seeing you at MozSprint. HAPPY ANIMATING!
-                    </tspan>
-                    <tspan class="h5 sub-title" x="30" y="760" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        ~Kip Omaha
-                    </tspan>
-                </text>
-
-            </svg>
-
-            <svg id="alpha_features" class="canvas blog" viewBox="0 0 750 948">
-                <text style="font-size: 65; width: 100%">
-                    <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        The Pi Reel, DOCS
-                    </tspan>
-                </text>
-                <text style="font-size: 22; width: 100%">
-                    <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        The application package being taken to mozsprint,is an alpha package with a ui, that 
-                    </tspan>
-                    <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        will feature a console for coding and another one for keyframes.
-                    </tspan>
-                    <tspan class="paragraph h5" x="15" y="165" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
-                        Blog still in progress, please be patient.
-                    </tspan>
-                </text>
-            </svg>
-            
-            <form id="blog_form" class="canvas blog">
-                <fieldset class="abs tray inline-block">
-                    <legend class="tray lite-text">Pi Reel's Open Blog</legend>
-                </fieldset>
-            </form>
-        </json-canvas>
-
-<!-- [footer] -->
-        <j-foot id="footer-banner" class="header paragraph">
-            <h3>Communication Channels</h3>
-            <j-el class="block">
-                <a class="h5" href="https://pireel.github.io/PiReel-Website/">Site <img src="img/pireel-icon.svg" height="16px" width="auto"></img></a>
-                <j-el class="inline-block"> : "Home of the Pi Reel Project."</j-el>
-            </j-el>
-            <j-el class="block">
-                <a class="h5" href="construction.html">Facebook</a> 
-                <strong class="fa fa-facebook-official"></strong> 
-                <j-el class="inline-block"> : Chat and connect online with Facebook</j-el>
-            </j-el>
-            <j-el class="block">
-                <a class="h5" href="https://gitter.im/PiReel/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link">Gitter:</a> 
-                <img scr="//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico" height="16px" width="auto"></img>
-                <j-el class="inline-block">Chat and connect online with Gitter</j-el>
-            </j-el>
-            <j-el class="block">
-                <a class="h5" href="">Github </a> 
-                <strong class="fa fa-github"></strong> 
-                <j-el class="inline-block"> : Keep in touch with our project files</j-el>
-            </j-el>
-            <j-el class="block">
-                <a class="h5">Cloud Nine </a> 
-                <img src="https://ide.c9.io/favicon.ico" height="16px" width="auto"></img> 
-                <j-el class="inline-block"> : "Code online with Pi Reel Coders"</j-el>
-            </j-el>
-            <j-el>
-                <a href="https://github.com/PiReel/PiReel-Website/blob/master/LICENSE">Copyright, GNU General Public License v3.0</a>
-            </j-el>
-        </j-foot>
+        <header>
+            <h1>Welcome to Pi Reel's Git Hub Page.</h1>
+            <a href="https://mozilla.github.io/global-sprint/"><img src="img/pireel.png" width="100%" height="auto"></img></a>
+            <h5 class="fa fa-github"></h5>
+            <h5 class="fa gitter"></h5>
+        </header>
+        <div>
+            <p>
+                Mozilla Club Omaha is excited to be contributing the <strong><i>"Pi Reel Science and Engineering Animator Project"</i></strong> for Mozsprint 2017.
+            </p>
+            <h2>Special thanks to the following Open Source Projects for making this alpha build of Pi Reel happen.</h2>
+            <nav>
+                <a href="https://www.mozilla.org/en-US/foundation/">Mozilla Foundation</a> <strong>||</strong> 
+                <a href="https://learning.mozilla.org/en-US/">Mozilla Learning Network</a> <strong>||</strong> 
+                <a href="https://science.mozilla.org/">Mozilla Science</a> <strong>||</strong> 
+                <a href="https://c9.io">Cloud 9</a> <strong>||</strong> 
+                <a href="http://x-tag.github.io/">x-tag</a> <strong>||</strong> 
+                <a href="https://www.apache.org/">Apache</a> <strong>||</strong> 
+                <a href="https://www.apachefriends.org/index.html">XAMMP</a>
+            </nav>
+            <a href="https://mozilla.github.io/global-sprint/"><img src="img/mozsprint2017/Global-Sprint-2017.png"></img></a>
+            <p>
+                Pi Reel, is a simple animation editor tailor made for science and engineering. The simple user interface gives you a basic platform to customize 
+                however you need the animator to be. It can accomplish this a couple of different ways, but the featured way we hope to roll out at this year's 
+                Mozsprint are the <strong>"Pi Reel Key Definition"</strong> and <strong>"Pi Reel Frame Definition"</strong> consoles.
+            </p>
+            <p>
+                Below is a list of some of the products of Pi Reel and the features Pi Reel will be bringing to demo and collaborate on at Mozsprint 2017.
+            </p>
+            <ol>
+                <li>Pi Reel Blogging Engine</li>
+                <ol>
+                    <li>Open Science Blogging</li>
+                    <li>Open Engineering Blogging</li>
+                    <li>Science Fiction Story Blogging</li>
+                    <li>Graphic Novel Blogging</li>
+                </ol>
+                <li>Pi Reel Open Workflow Engine</li>
+                <ol>
+                    <li>Issues Tracker Web App</li>
+                    <li>Roadmap Web App</li>
+                    <li>Guide Doc Viewer</li>
+                </ol>
+                <li>Pi Reel Science and Engineering Animator</li>
+                <ol>
+                    <li>Key Definition Console</li>
+                    <li>Frame Definition Console</li>
+                    <li>Canvas Tray</li>
+                    <li>Media Feed</li>
+                </ol>
+            </ol>
+            <p class="c9"></p>
+            <p>Preview our open blog on the c9.io dev server.</p>
+            <p class="c9"></p>
+            <p>Preview our open collaboration engine on the c9.io dev server.</p>
+            <p class="c9"></p>
+            <p>Preview our core project the Pi Reel Science and Engineering Animator.</p>
+        </div>
+        <footer>
+            <p>Some of the images on this page were collected from sources on the web like Mozilla, Gitter, Cloud 9, and Github.</p>
+        </footer>
     </body>
 
 </html>

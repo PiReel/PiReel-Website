@@ -14,11 +14,31 @@ a:visited{
   color: rgba(255,175,17,1); stroke: rgba(255,215,215,1); fill: rgba(175,75,85,1);
 }
 a:hover{
-  color: rgba(165,165,255,1); stroke: rgba(165,165,255,1); fill: rgba(65,65,125,1);
+  background-color: rgb(225,225,225);
+  color: rgb(100,175,100); stroke: rgba(165,165,255,1); fill: rgba(65,65,125,1);
 }
 a:active{
-  background-color: white;
-  color: rgba(255,17,17,1); stroke: rgba(255,17,17,1); fill: rgba(175,75,85,1);
+  background: rgb(225,225,225);
+  color: rgb(255,255,17); stroke: rgba(255,17,17,1); fill: rgba(175,75,85,1);
+}
+input[type="button"]{
+  background-color: orange;
+}
+input[type="button"]:hover{
+  background-color:  skyblue;
+}
+input[type="button"]:active{
+  background: yellow;
+}
+input[type="button"]:focus{
+  background-color: yellow;
+}
+form{
+  box-sizing: border-box;
+  display: inline-block;
+}
+fieldset{
+  box-sizing: border-box;
 }
 
 /* [xhtml] */
@@ -40,11 +60,19 @@ j-select{
 }
 j-option{
   position: relative;
-  width: 91%; height: 100%; left: 0%; top: 0%;
+  width: 84%; height: 100%; left: 0%; top: 0%;
   padding-left: 1%;
   display: block; box-sizing: border-box;
   overflow: hidden;
-  background-color: rgba(100,100,100,.75);
+  background-color: rgba(100,100,100,.95);
+}
+j-option:hover{
+  background: rgb(225,225,225);
+  color: rgb(95,95,115);
+}
+j-option:active{
+  background: rgb(225,225,225);
+  color: rgb(255,95,115);
 }
 j-toggle{
   position: absolute; left: 92%; top: 0%;
@@ -64,7 +92,6 @@ j-toggle:hover{
   overflow: hidden;
   background-color: rgba(100,175,100,1);
   font-size: 1.35vw;
-  color: rgb(95,95,115);
 }
 j-toggle:active{
   position: absolute; left: 92%; top: 0%;
@@ -76,6 +103,34 @@ j-toggle:active{
   font-size: 1.35vw;
   color: rgb(95,95,115);
 }
+j-select > j-check, j-option > j-check{
+  position: absolute; left: 85%; top: 0%; z-index: 10; width: 5%; height: 100%;
+  background: white;
+
+  
+}
+j-select > j-check:hover, j-option > j-check:hover{
+  background: skyblue; 
+  border: ridge 2px;
+}
+j-select > j-check:active, j-option > j-check:active{
+  background: yellow; 
+  border: ridge 2px;
+}
+j-data{
+  position: relative; width: 10%; height: 100%;
+  display: inline-box; box-sizing: border-box;
+  margin-left: 1%;
+  background: rgba(255,0,0,.25);
+}
+j-class{
+  position: absolute; left: 95%; top: -10px; z-index:10;
+  padding: 10px;
+  display: block;
+  float: right; 
+  box-sizing: border-box;
+  background-color: rgba(0,0,185,1);
+}
 
 /* [utility classes] */
 .memory{
@@ -86,6 +141,9 @@ j-toggle:active{
   position: relative; left: auto; top: auto; width: auto; height: auto;
   overflow-X: hidden; overflow-Y: hidden; 
   background: rgba(147,147,147,1); border: groove 2px rgba(177,177,177,1);
+}
+.marker-board{
+  background: white;
 }
 .circle{
   border-radius: 100%;
@@ -101,13 +159,30 @@ j-toggle:active{
 .inline-block{
   display: inline-block;
 }
-.flt-right-top{
-  top: 0px;
+.margin-small{
+  margin: 5px;
+}
+.padding-small{
+  padding: 5px;
+}
+.margin-medium{
+  margin: 10px;
+}
+.padding-medium{
+  padding: 10px;
+}
+.flt-right{
   float: right;
 }
 .canvas{
   display: inline-block;
   background: rgba(215,215,255,1); fill: rgba(240,240,255,1);
+  overflow-X: scroll; overflow-Y: scroll;
+}
+.form{
+  position: relative; width: 55%; height: 90%;
+  border: 3px inset rgb(99,99,99);
+  background: rgba(245,245,255,1); fill: rgba(245,245,255,1);
 }
 .blog{
   margin: 2.5% 5% 2.5% 5%;
@@ -118,21 +193,29 @@ j-toggle:active{
 .abs{
   position: absolute;
 }
+.oFlow{
+  overflow: scroll;
+}
+.jopt-selected{
+  background: white;
+  border-bottom: 2px black solid;
+  color: limegreen;
+}
 
 /* [text classes] */
 .lite-text{
   color: rgba(189,189,189,1); stroke: rgba(189,189,189,1); fill: rgba(75,75,85,1);
 }
 .dark-text{
-  color: rgba(75,75,85,1); stroke: rgba(75,75,85,1); fill: rgba(75,75,85,1);
+  color: rgba(100,100,115,1); stroke: rgba(100,100,115,1); fill: rgba(75,75,85,1);
 }
 .steel-text{
   color: rgba(175,175,185,1); stroke: rgba(175,175,185,1); fill: rgba(175,175,185,1);
 }
-.lite-outline{
+.lite-stroke{
   stroke: rgba(175,175,185,1); 
 }
-.dark-outline{
+.dark-stroke{
   stroke: rgba(75,75,85,1); 
 }
 .paragraph{

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="mozsprint_talk-blog" class="canvas blog" viewBox="0 0 750 948">
+    <text class="blog title" style="font-size: 65; width: 100%">
+        <tspan x="5" y="70" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            MozSprint 2017 Talk!
+        </tspan>
+    </text>
+
+    <text class="blog paragraph" style="font-size: 22; width: 100%">
+        <tspan class="paragraph" x="20" y="110" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            The time is almost on us, June 1st and 2nd, and the Pi Reel project is in full swing, 
+        </tspan>
+        <tspan class="paragraph" x="15" y="135" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            getting geared up for the MozSprint event. We hope to spark conversation about web 
+        </tspan>
+        <tspan class="paragraph" x="15" y="160" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            technologies being a catalyst for people's ideas and how Pi Reel fits into this   
+        </tspan>
+        <tspan class="paragraph" x="15" y="185" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            picture.
+        </tspan>
+    </text>
+
+    <g>
+        <path stroke="rgb(255,255,150)" stroke-width="6" fill="none"
+            d="M75,200 L375,180 
+               M75,215 L460,195 
+               M75,230 L475,230 
+               M65,245 L425,260"></path>
+        <path stroke="rgb(255,255,200)" stroke-width="2" fill="none"
+            d="M65,190 L375,180 
+               M75,205 L460,195 
+               M75,220 L475,230 
+               M75,235 L425,260"></path>
+    </g>
+
+    <g>
+        <path stroke="rgb(255,255,185)" stroke-width="6" fill="none"
+            d="M75,275 L60,250 
+               C0,250 30,210 50,200 75,215 55,225 50,227"></path>
+
+    </g>
+    <g>
+        <path stroke="rgb(135,135,135)" stroke-width="6" fill="none"
+            d="M65,280 L90,265"></path>
+        <path stroke="rgb(135,135,135)" stroke-width="3" fill="none"
+            d="M75,285 L90,275"></path>
+        <circle cx="86" cy="286" r="3"
+            stroke="rgb(200,200,185)" stroke-width="2" fill="rgb(225,225,185)"></circle>
+    </g>
+
+    <text class="blog paragraph" style="font-size: 22; width: 100%">
+        <tspan class="paragraph" x="20" y="305" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            My own expierence working out in different industries, that range from: class a driver 
+        </tspan>
+        <tspan class="paragraph" x="15" y="330" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+             to machine operator. It's very obvious to me that often times companies large and small  
+        </tspan>
+        <tspan class="paragraph" x="15" y="355" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            don't pay attention to training programs involving web technologies and other related  
+        </tspan>
+        <tspan class="paragraph" x="15" y="380" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            computer sciences tech.  Programs involving training usually come about at companies
+        </tspan>
+        <tspan class="paragraph" x="15" y="405" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            as a result of mistakes being made. A lot of those mistakes that are made could be 
+        </tspan>
+        <tspan class="paragraph" x="15" y="430" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            prevented if they had a better training system or a more effecient way to communicate 
+        </tspan>
+        <tspan class="paragraph" x="15" y="455" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            ideas, other than the anonymous help box you put a sheet of paper in.
+        </tspan>
+    </text>
+
+    <text class="blog paragraph" style="font-size: 22; width: 100%">
+        <tspan class="paragraph" x="20" y="500" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            This seems to be the story of most all idustrial settings where you might find
+        </tspan>
+        <tspan class="paragraph" x="15" y="525" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            yourself working at as a skilled laborer.
+        </tspan>
+        <tspan class="paragraph" x="20" y="565" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            At MozSprint we want to open peoples minds to new ways of thinking
+        </tspan>
+        <tspan class="paragraph" x="15" y="590" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            and new technologies that help keep everything moving in the safe 
+        </tspan>
+        <tspan class="paragraph" x="15" y="615" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            direction. So join us to talk shop.
+        </tspan>
+        <tspan class="h5" x="25" y="645" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            For more information click <a class="block h5" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing">here</a>!
+        </tspan>
+        <tspan class="paragraph" x="20" y="720" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            I look forward to seeing you at MozSprint. HAPPY ANIMATING!
+        </tspan>
+        <tspan class="h5 sub-title" x="30" y="760" stroke="rgba(77,77,77,1)" stroke-width="0" fill="rgba(177,177,177,1)">
+            ~Kip Omaha
+        </tspan>
+    </text>
+
+</svg>
