@@ -12,6 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+        <link rel="stylesheet" href="css/styles.css"></link>
 
         <title>pireel@mozsprint2017</title>
 <!-- [stylesheet] -->
@@ -19,6 +20,18 @@
 body{
     background-image: url(img/gitpage-background.png);
     background-attachment: fixed;
+}
+a:link{
+    color: rgba(125,75,5,1);
+}
+a:hover{
+    color: red;
+}
+.display{
+    background: rgba(255,255,255,.5);
+}
+.fa{
+    background: rgba(255,255,255,.5);
 }
 @media screen and (max-width: 684px){
     header{
@@ -78,6 +91,11 @@ body{
     h2{
         font-size: 2vw;
     }
+    h4{
+        background: rgba(200,110,110,.5);
+        display: inline-block;
+        font-size: 2vw;
+    }
     nav{
         margin: 5px;
     }
@@ -117,6 +135,115 @@ body{
         background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
         background-size: 95%;
     }
+}
+@media screen and (max-width: 1420px){
+    header{
+        width: 100%;
+        height: 300px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    img{
+        width: 100%;
+    }
+    div{
+        width: 90%; 
+        display: block;
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        background: rgba(255,255,255,.25);
+    }
+    h1{
+        font-size: 1.75vw;
+    }
+    p{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        font-size: 1.25vw;
+        text-align: center;
+        background: rgba(255,255,255,.5);
+    }
+    p  + ol{
+        margin-left: 30%;
+        text-align: left;
+        font-size: 1vw;
+        list-style-position: inside;
+        background: rgba(255,255,255,.5);
+    }
+    li + ol{
+        margin-left: 2.5%;
+    }
+    header > h1{
+        position: absolute;
+        background: rgba(125,125,125,1);
+        color: rgba(255,177,17,1);
+        float: left;
+    }
+    h1 + a{
+        margin-left: 25%;
+        width: 40%;
+        height: auto;
+        display: inline-block;
+        background: rgba(255,255,255,.5);
+    }
+    h2{
+        font-size: 1.25vw;
+    }
+    h4{
+        background: rgba(200,110,110,.5);
+        display: inline-block;
+        font-size: 1.125vw;
+    }
+    nav{
+        margin: 5px;
+    }
+    nav a{
+        font-size: 1.15vw;
+        background: white;
+        font-weight: bold;
+        color: rgb(100,100,100);
+    }
+    nav a:hover{
+        color: red;
+    }
+    p + a{
+        font-size: 3.85vw;
+    }
+    a + strong{
+        font-size: 1.25vw;
+    }
+    footer{
+        width: 100%;
+        height: 300px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    .fa{
+        margin-right: 3px;
+        font-size: 3vw;
+        float: left;
+    }
+    .c9{
+        width: 50px; height: 50px;
+        background: url("https://ide.c9.io/favicon.ico") no-repeat;
+        background-size: 95%;
+    }
+    .gitter{
+        width: 2.75vw; height: 3vw;
+        background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
+        background-size: 95%;
+    }
+    p.c9{
+        text-align: center;
+    }
+    .c9 + a{
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
 }
 @media screen and (min-width: 1920px){
     header{
@@ -174,6 +301,11 @@ body{
     h2{
         font-size: 1.25vw;
     }
+    h4{
+        background: rgba(200,110,110,.5);
+        display: inline-block;
+        font-size: 1.125vw;
+    }
     nav{
         margin: 5px;
     }
@@ -185,6 +317,9 @@ body{
     }
     nav a:hover{
         color: red;
+    }
+    p + a{
+        font-size: 3.85vw;
     }
     a + strong{
         font-size: 1.25vw;
@@ -219,21 +354,22 @@ body{
     }
     
 }
-@media screen and (device-width: 360px) 
+@media screen 
+  and (device-width: 360px) 
   and (device-height: 640px)
   and (orientation: portrait){
     header{
         width: 100%;
-        height: 100px;
+        height: 150px;
         background: rgba(255,125,25,.5);
         display: block;
     }
     div{
-        width: 90%; 
+        width: 100%; 
         display: block;
         box-sizing: border-box;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
         text-align: center;
         background: rgba(255,255,255,.25);
     }
@@ -244,21 +380,26 @@ body{
         font-size: 2.25vw;
     }
     h2{
-        font-size: 3vw;
+        font-size: 4.125vw;
+    }
+    h4{
+        background: rgba(200,110,110,.5);
+        display: inline-block;
+        font-size: 4vw;
     }
     p{
-        width: 70%;
+        width: 90%;
         padding: 1vw;
-        margin-left: 15%;
+        margin-left: 5%;
         margin-right: 25%;
-        font-size: 2vw;
+        font-size: 4vw;
         text-align: center;
         background: rgba(255,255,255,.5);
     }
     p  + ol{
         margin-left: 15%;
         text-align: left;
-        font-size: 2vw;
+        font-size: 4vw;
         font-weight: bold;
         list-style-position: inside;
         background: rgba(255,255,255,.5);
@@ -270,11 +411,12 @@ body{
         position: absolute;
         background: rgba(125,125,125,1);
         color: rgba(255,177,17,1);
-        float: left;
+        font-size: 4.75vw;
     }
     h1 + a{
-        margin-left: 25%;
-        width: 60%;
+        margin-top: 10%;
+        margin-left: 5%;
+        width: 80%;
         height: auto;
         display: inline-block;
         background: rgba(255,255,255,.5);
@@ -283,13 +425,10 @@ body{
         margin: 5px;
     }
     nav a{
-        font-size: 2vw;
+        font-size: 4.25vw;
         background: white;
         font-weight: bold;
         color: rgb(100,100,100);
-    }
-    nav a:hover{
-        color: red;
     }
     a + strong{
         font-size: 1.25vw;
@@ -300,13 +439,14 @@ body{
         background: rgba(255,125,25,.5);
         display: block;
     }
-    a:hover{
-        color: red;
-    }
     .fa{
         margin-right: 1vw;
         font-size: 6vw;
         float: left;
+        background: rgba(255,255,255,.5);
+    }
+    .link-text{
+        font-size: 4vw;
     }
     .c9{
         width: 6vw; height: 6vw;
@@ -318,30 +458,34 @@ body{
         background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
         background-size: 95%;
     }
+
 }
 </style>
     </head>
 
     <body>
+<!-- [header] -->
         <header>
             <h1>Welcome to Pi Reel's Git Hub Page.</h1>
-            <a href="#"><img src="img/pireel.png" width="100%" height="auto"></img></a>
-            <h5 class="fa fa-github"></h5>
-            <h5 class="fa gitter"></h5>
+            <a href="#"><img src="img/pireel.png"></img></a>
+            <a href="https://github.com/PiReel"><h5 class="fa fa-github"></h5></a>
+            <a href="https://gitter.im/PiReel/Lobby"><h5 class="fa gitter"></h5></a>
         </header>
-        <div>
+
+<!-- [div] -->
+        <div class="display">
             <p>
                 Mozilla Club Omaha is excited to be contributing the <strong><i>"Pi Reel Science and Engineering Animator Project"</i></strong> for Mozsprint 2017.
             </p>
             <h2>Special thanks to the following Open Source Projects for making this alpha build of Pi Reel happen.</h2>
             <nav>
-                <a href="https://www.mozilla.org/en-US/foundation/">Mozilla Foundation</a> <strong>||</strong> 
-                <a href="https://learning.mozilla.org/en-US/">Mozilla Learning Network</a> <strong>||</strong> 
-                <a href="https://science.mozilla.org/">Mozilla Science</a> <strong>||</strong> 
-                <a href="https://c9.io">Cloud 9</a> <strong>||</strong> 
-                <a href="http://x-tag.github.io/">x-tag</a> <strong>||</strong> 
-                <a href="https://www.apache.org/">Apache</a> <strong>||</strong> 
-                <a href="https://www.apachefriends.org/index.html">XAMMP</a>
+                <a href="https://www.mozilla.org/en-US/foundation/" class="inline-block circle">Mozilla Foundation</a> <strong>||</strong> 
+                <a href="https://learning.mozilla.org/en-US/" class="inline-block circle">Mozilla Learning Network</a> <strong>||</strong> 
+                <a href="https://science.mozilla.org/" class="inline-block circle">Mozilla Science</a> <strong>||</strong> 
+                <a href="https://c9.io" class="inline-block circle">Cloud 9</a> <strong>||</strong> 
+                <a href="http://x-tag.github.io/" class="inline-block circle">x-tag</a> <strong>||</strong> 
+                <a href="https://www.apache.org/" class="inline-block circle">Apache</a> <strong>||</strong> 
+                <a href="https://www.apachefriends.org/index.html" class="inline-block circle">XAMMP</a>
             </nav>
             <a href="https://mozilla.github.io/global-sprint/"><img src="img/mozsprint2017/Global-Sprint-2017.png"></img></a>
             <p>
@@ -374,14 +518,16 @@ body{
                     <li>Media Feed</li>
                 </ol>
             </ol>
+            <h4>A note to remember:</h4>
+            <h4>Response will be, "No applicaiton seems to be running here", if the demo is down.</h4>
             <p class="c9"></p>
-            <a href="https://pireel-website-pireel.c9users.io/index.php">Pi Reel Open Blog: Demo Open</a>
+            <a href="https://pireel-website-pireel.c9users.io/index.php" class="link-text">Pi Reel Open Blog: Demo Open</a>
             <p>Preview our open blog on the c9.io dev server.</p>
             <p class="c9"></p>
-            <a href="https://pireel-contributing-pireel.c9users.io/">Pi Reel Open Collaboration: Static Demo Open</a>
+            <a href="https://pireel-contributing-pireel.c9users.io" class="link-text">Pi Reel Open Collaboration: Static Demo Open</a>
             <p>Preview our open collaboration engine on the c9.io dev server.</p>
             <p class="c9"></p>
-            <a href="https://pireel-animator-pireel.c9users.io/index-core.php">Pi Reel Core: Demo Open</a>
+            <a href="https://pireel-animator-pireel.c9users.io/index-core.php" class="link-text">Pi Reel Core: Demo Open</a>
             <p>Preview our core project the Pi Reel Science and Engineering Animator.</p>
         </div>
         <footer>
