@@ -17,11 +17,14 @@
   like Pi Reel gives you as a consumer more choices so that your not boxed in to small spaces.  
   
   These days web applications geared towards communications and graphics keep businesses local and at the same time connect them globally. Making for a diverse
-  and dizzying array of potential uses for web programs. Pi Reel utilizes the best parts of the web so that users can make the best choices for them selves
-  by being better informed. 
+  and dizzying array of potential uses for web programs. Pi Reel utilizes the best parts of the web so that users can make the best choices for them selves by being better informed. 
 
 ### Our Mission   
   We strive every day to bring a tolerant, compassionate, and just world to life by working in the open to collaborate on projects for science, engineering, and creating.  
+
+  Pi Reel's mission statement speaks to the heart and life beat of the core animation web applicaiton. The core application otherwise known as the "Pi Reel Science and Engineering Animator" (PISEA) is built on top of a Cloud Server enabling people to share information instantly in animation, video, picture, right along instantly with related readable text information.  
+
+  This by itself if not a solution though, but it is a step in the right direction we think though. We would love to know what you think and will be having an active conservation about it during the Mozilla Global Sprint. Please, check under projects "Mission Impossible Style" for more information.
 
 ### Our Beliefs and Values  
   Our belief is that through art we can overcome obstacles and come together to learn and share our knowledge and dreams to create a better world.    
