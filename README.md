@@ -6,6 +6,11 @@
 
   The Pi Reel Web application is more than a web application. Pi Reel is a school of thought. Our goal is to bring together an inclusive, welcoming group of science enthusiasts and professionals to accomplish through art and science a sustainable, safe, comfortable future for all. 
 
+### Our Products and Services
+  Let me introduce to you Fire Rolie, Pi Reel's chief archive director. His job is to make sure that all information in the archive is accurate and up to date. He also over see's the design of Pi Reel's universal viewer.  
+  ![Fire Rolie](img/fire_rolie.png) 
+  
+
 ### Activism  
   Monopolization in industries like the energy industry have led to conflicts at the [South Dakota Pipelines](http://www.nbcnews.com/storyline/dakota-pipeline-protests/dakota-access-pipeline-now-has-oil-beneath-missouri-river-company-n739296), 
   rare earth metal conflicts in Africa, and more. Pi Reel puts the power in your hands to stop supporting conflicts here in the U.S. and overseas.  Technologies
