@@ -24,7 +24,7 @@
 
   Pi Reel's mission statement speaks to the heart and life beat of the core animation web applicaiton. The core application otherwise known as the "Pi Reel Science and Engineering Animator" (PISEA) is built on top of a Cloud Server enabling people to share information instantly in animation, video, picture, right along instantly with related readable text information.  
 
-  This by itself if not a solution though, but it is a step in the right direction we think though. We would love to know what you think and will be having an active conservation about it during the Mozilla Global Sprint. Please, check under projects "Mission Impossible Style" for more information.
+  This by itself isn't a solution, but it is a step in the right direction. We would love to know what your thinking and what questions you have and will be having an active conservation about it during the Mozilla Global Sprint. Please, check under projects "Mission Impossible Style" for more information.
 
 ### Our Beliefs and Values  
   Our belief is that through art we can overcome obstacles and come together to learn and share our knowledge and dreams to create a better world.    
