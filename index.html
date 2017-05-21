@@ -33,12 +33,15 @@ a:hover{
 .fa{
     background: rgba(255,255,255,.5);
 }
-@media screen and (max-width: 684px){
+@media screen and (max-width: 1920px){
     header{
         width: 100%;
-        height: 150px;
+        height: 300px;
         background: rgba(255,125,25,.5);
         display: block;
+    }
+    img{
+        width: 100%;
     }
     div{
         width: 90%; 
@@ -49,31 +52,26 @@ a:hover{
         text-align: center;
         background: rgba(255,255,255,.25);
     }
-    img{
-        width: 100%;
-    }
     h1{
-        font-size: 2.25vw;
+        font-size: 1.75vw;
     }
     p{
-        width: 70%;
-        padding: 1vw;
-        margin-left: 15%;
+        width: 50%;
+        margin-left: 25%;
         margin-right: 25%;
-        font-size: 2vw;
+        font-size: 1.25vw;
         text-align: center;
         background: rgba(255,255,255,.5);
     }
     p  + ol{
-        margin-left: 15%;
+        margin-left: 30%;
         text-align: left;
-        font-size: 2vw;
-        font-weight: bold;
+        font-size: 1vw;
         list-style-position: inside;
         background: rgba(255,255,255,.5);
     }
     li + ol{
-        margin-left: 0%;
+        margin-left: 2.5%;
     }
     header > h1{
         position: absolute;
@@ -83,24 +81,24 @@ a:hover{
     }
     h1 + a{
         margin-left: 25%;
-        width: 60%;
+        width: 40%;
         height: auto;
         display: inline-block;
         background: rgba(255,255,255,.5);
     }
     h2{
-        font-size: 2vw;
+        font-size: 1.25vw;
     }
     h4{
         background: rgba(200,110,110,.5);
         display: inline-block;
-        font-size: 2vw;
+        font-size: 1.125vw;
     }
     nav{
         margin: 5px;
     }
     nav a{
-        font-size: 2vw;
+        font-size: 1.15vw;
         background: white;
         font-weight: bold;
         color: rgb(100,100,100);
@@ -108,33 +106,41 @@ a:hover{
     nav a:hover{
         color: red;
     }
+    p + a{
+        font-size: 3.85vw;
+    }
     a + strong{
         font-size: 1.25vw;
     }
     footer{
         width: 100%;
-        height: 150px;
+        height: 300px;
         background: rgba(255,125,25,.5);
         display: block;
     }
-    a:hover{
-        color: red;
-    }
     .fa{
-        margin-right: 1vw;
-        font-size: 6vw;
+        margin-right: 3px;
+        font-size: 3vw;
         float: left;
     }
     .c9{
-        width: 6vw; height: 6vw;
+        width: 50px; height: 50px;
         background: url("https://ide.c9.io/favicon.ico") no-repeat;
         background-size: 95%;
     }
     .gitter{
-        width: 6vw; height: 6vw;
+        width: 2.75vw; height: 3vw;
         background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
         background-size: 95%;
     }
+    p.c9{
+        text-align: center;
+    }
+    .c9 + a{
+        font-size: 1.5vw;
+        text-align: center;
+    }
+    
 }
 @media screen and (max-width: 1420px){
     header{
@@ -244,6 +250,109 @@ a:hover{
         text-align: center;
     }
     
+}
+@media screen and (max-width: 684px){
+    header{
+        width: 100%;
+        height: 150px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    div{
+        width: 90%; 
+        display: block;
+        box-sizing: border-box;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        background: rgba(255,255,255,.25);
+    }
+    img{
+        width: 100%;
+    }
+    h1{
+        font-size: 2.25vw;
+    }
+    p{
+        width: 70%;
+        padding: 1vw;
+        margin-left: 15%;
+        margin-right: 25%;
+        font-size: 2vw;
+        text-align: center;
+        background: rgba(255,255,255,.5);
+    }
+    p  + ol{
+        margin-left: 15%;
+        text-align: left;
+        font-size: 2vw;
+        font-weight: bold;
+        list-style-position: inside;
+        background: rgba(255,255,255,.5);
+    }
+    li + ol{
+        margin-left: 0%;
+    }
+    header > h1{
+        position: absolute;
+        background: rgba(125,125,125,1);
+        color: rgba(255,177,17,1);
+        float: left;
+    }
+    h1 + a{
+        margin-left: 25%;
+        width: 60%;
+        height: auto;
+        display: inline-block;
+        background: rgba(255,255,255,.5);
+    }
+    h2{
+        font-size: 2vw;
+    }
+    h4{
+        background: rgba(200,110,110,.5);
+        display: inline-block;
+        font-size: 2vw;
+    }
+    nav{
+        margin: 5px;
+    }
+    nav a{
+        font-size: 2vw;
+        background: white;
+        font-weight: bold;
+        color: rgb(100,100,100);
+    }
+    nav a:hover{
+        color: red;
+    }
+    a + strong{
+        font-size: 1.25vw;
+    }
+    footer{
+        width: 100%;
+        height: 150px;
+        background: rgba(255,125,25,.5);
+        display: block;
+    }
+    a:hover{
+        color: red;
+    }
+    .fa{
+        margin-right: 1vw;
+        font-size: 6vw;
+        float: left;
+    }
+    .c9{
+        width: 6vw; height: 6vw;
+        background: url("https://ide.c9.io/favicon.ico") no-repeat;
+        background-size: 95%;
+    }
+    .gitter{
+        width: 6vw; height: 6vw;
+        background: url("//cdn03.gitter.im/_s/88aafe0/images/favicon-read.ico") no-repeat;
+        background-size: 95%;
+    }
 }
 @media screen and (min-width: 1920px){
     header{
@@ -530,8 +639,18 @@ a:hover{
             <a href="https://pireel-animator-pireel.c9users.io/index-core.php" class="link-text">Pi Reel Core: Demo Open</a>
             <p>Preview our core project the Pi Reel Science and Engineering Animator.</p>
         </div>
+
+<!-- [div] -->
         <footer>
+            <h1>Contacting Pi Reel!</h1>
             <p>Some of the images on this page were collected from sources on the web like Mozilla, Gitter, Cloud 9, and Github.</p>
+            <p>
+                Information on our  licensing, code of conduct, and contributing can be found <a href="https://github.com/PiReel/PiReel-Website">here</a>.
+                If you have any other questions, concerns, or comments please use our gmail at pireelanimation@gmail.com or mozillaomaha@gmail.com.
+            </p>
+            <p> 
+                Also, don't forget about our <a href="https://gitter.com/PiReel/Lobby">Gitter</a> lobby!
+            </p>
         </footer> 
     </body>
 
