@@ -1,14 +1,14 @@
 # Pi Reel
 
 ### Welcome to Pi Reel  
-  ![Pi Reel Logo](img/pireel.png)   
+  ![Pi Reel Logo](img/pireel.png) 
   Pi Reel is an easy to use animation tool, made for engineers, makers, and scientists of all skill levels. Pi Reel can create everything from animations, entrepreneurial videos, and animated structures and gizmos.  
 
   The Pi Reel Web application is more than a web application. Pi Reel is a school of thought. Our goal is to bring together an inclusive, welcoming group of science enthusiasts and professionals to accomplish through art and science a sustainable, safe, comfortable future for all. 
 
 ### Our Products and Services
   Let me introduce to you Fire Rolie, Pi Reel's chief archive director. His job is to make sure that all information in the archive is accurate and up to date. He also over see's the design of Pi Reel's universal viewer.  
-  ![Fire Rolie](img/fire_rolie.png) 
+  <img src="img/fire_rolie.png" width="20%" height="auto"></img>
   
 
 ### Activism  
