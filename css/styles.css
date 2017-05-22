@@ -3,9 +3,13 @@
   Stylesheet
 */
 
+/* [fonts] */
+
+
 /* [html] */
 body{
-    font-size: 16px;
+  font-family: Fira Mono;
+  font-size: .85vw;
 }
 a:link{
   color: rgba(215,215,215,1); stroke: rgba(215,215,215,1); fill: rgba(75,75,85,1);
@@ -39,25 +43,65 @@ form{
 }
 fieldset{
   box-sizing: border-box;
+  background: white;
 }
 
 /* [xhtml] */
+/* [j-header] */
 j-header{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+body > j-header:first-child{
   position: fixed; top: 0px; left: 0px;
-  margin: 2%;
+  margin: 0%;
 }
+body > j-header:first-of-type{
+  position: fixed;
+  top: 75px;
+}
+
+/* [j-tray] */
 j-tray{
-  padding: 0px 10px 0px 10px;
-  display: inline-block; box-sizing: border-box;
-  overflow-Y: hidden; overflow-X: hidden;
-  background-color: rgba(255,255,255,.55); border: ridge 2px rgb(98,98,98);
+  display: inline-block; 
+  box-sizing: border-box;
+  overflow-Y: hidden; 
+  overflow-X: hidden;
+  background-color: rgba(255,255,255,.55); 
+  border: ridge 2px rgb(98,98,98);
 }
+body > j-tray:first-child{
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    width: 100%; 
+    height: 75px; 
+}
+body > j-tray:last-child{
+    position: fixed; 
+    top: calc(100%-75px);
+    left: 0px;
+    width: 100%; 
+    height: 75px; 
+}
+
+
+/* [json-canvas] */
+json-canvas{
+  display: block;
+  box-sizing: border-box;
+}
+/* [j-select] */
 j-select{
     position: relative; height: 100%;
     display: inline-block; box-sizing: border-box;
     overflow-Y: hidden; overflow-X: hidden;
     background-color: rgba(255,255,255,.9);
 }
+
+/* [j-option] */
 j-option{
   position: relative;
   width: 84%; height: 100%; left: 0%; top: 0%;
@@ -74,35 +118,31 @@ j-option:active{
   background: rgb(225,225,225);
   color: rgb(255,95,115);
 }
+
 j-toggle{
-  position: absolute; left: 92%; top: 0%;
+  position: absolute; 
+  left: 90%; 
+  top: 0%;
+  margin: 5px 0px 5px 5px; 
   padding: 0px 5px 0px 5px; 
-  border: outset 2px; border-radius: 100%;
-  display: inline-block; box-sizing: border-box;
+  border: outset 2px; 
+  border-radius: 100%;
+  display: inline-block; 
+  box-sizing: border-box;
   overflow: hidden;
   background-color: rgba(255,177,17,1);
-  font-size: 1.35vw;
   color: rgb(95,95,115);
 }
 j-toggle:hover{
-  position: absolute; left: 92%; top: 0%;
-  padding: 0px 5px 0px 5px; 
   border: outset 2px; border-radius: 100%;
-  display: inline-block; box-sizing: border-box;
-  overflow: hidden;
   background-color: rgba(100,175,100,1);
-  font-size: 1.35vw;
 }
 j-toggle:active{
-  position: absolute; left: 92%; top: 0%;
-  padding: 0px 5px 0px 5px; 
   border: outset 2px; border-radius: 100%;
-  display: inline-block; box-sizing: border-box;
-  overflow: hidden;
   background-color: rgba(255,255,17,1);
-  font-size: 1.35vw;
   color: rgb(95,95,115);
 }
+
 j-select > j-check, j-option > j-check{
   position: absolute; left: 85%; top: 0%; z-index: 10; width: 5%; height: 100%;
   background: white;
@@ -117,19 +157,39 @@ j-select > j-check:active, j-option > j-check:active{
   background: yellow; 
   border: ridge 2px;
 }
-j-data{
-  position: relative; width: 10%; height: 100%;
-  display: inline-box; box-sizing: border-box;
-  margin-left: 1%;
-  background: rgba(255,0,0,.25);
-}
-j-class{
-  position: absolute; left: 95%; top: -10px; z-index:10;
-  padding: 10px;
-  display: block;
-  float: right; 
+
+/* [j-btn] */
+j-btn{
+  display: inline-block;
   box-sizing: border-box;
-  background-color: rgba(0,0,185,1);
+  padding: 2px;
+  background: rgba(200,200,200,1);
+  border: rgba(150,150,150,1) 2px outset;
+}
+
+/* [j-ico] */
+j-ico{
+  display: block;
+  box-sizing: border-box;
+}
+
+/* j-class */
+j-curtain{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  background: rgba(255,177,17,1);
+  border: 2px solid black;
+}
+
+/* [j-el] */
+j-el{
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 /* [utility classes] */
@@ -137,12 +197,18 @@ j-class{
   position: fixed; left: 0px; top: 0px; width: 0px; height: 0px;
   overflow: hidden; opacity: 0;
 }
+.logo{
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .tray{
-  position: relative; left: auto; top: auto; width: auto; height: auto;
-  overflow-X: hidden; overflow-Y: hidden; 
-  background: rgba(147,147,147,1); border: groove 2px rgba(177,177,177,1);
+  position: relative;
+  overflow-: hidden; 
+  background: rgba(147,147,147,1); 
+  border: groove 2px rgba(177,177,177,1);
 }
 .marker-board{
+  display: block;
   background: white;
 }
 .circle{
@@ -151,28 +217,7 @@ j-class{
 .display{
   margin: 5px 0px 5px 0px;
   display: block;
-  background: rgba(240,240,255,1);
-}
-.block{
-  display: block;
-}
-.inline-block{
-  display: inline-block;
-}
-.margin-small{
-  margin: 5px;
-}
-.padding-small{
-  padding: 5px;
-}
-.margin-medium{
-  margin: 10px;
-}
-.padding-medium{
-  padding: 10px;
-}
-.flt-right{
-  float: right;
+  background: rgba(255,255,255,.95);
 }
 .canvas{
   display: inline-block;
@@ -196,10 +241,75 @@ j-class{
 .oFlow{
   overflow: scroll;
 }
-.jopt-selected{
+.ico-btn{
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: none;
+}
+
+/* [simple classes] */
+.abs{
+  position: absolute;
+}
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
+}
+.margin-small{
+  margin: 5px;
+}
+.padding-medium{
+  padding: 10px;
+}
+.padding-small{
+  padding: 5px;
+}
+.margin-medium{
+  margin: 10px;
+}
+.flt-right{
+  float: right;
+}
+.top{
+  top: 0px;
+}
+.left-20{
+  left: 20%;
+}
+.left-80{
+  left: 80%;
+}
+.height-fill{
+  height:100%;
+}
+.bg-pireGrey{
+  background: rgba(147,147,147,1); 
+}
+.bd-pireGray{
+  border: solid 2px rgba(177,177,177,1);
+}
+.bg-liteGreen{
+  background: rgba(175,255,175,1);
+}
+.bd-liteGreen{
+  border: 2px solid rgba(175,255,175,1);
+}
+.bg-darkGreen{
+  background: rgba(100,180,100,1);
+}
+.bd-darkGreen{
+  border: solid 2px rgba(100,180,100,1);
+}
+.bg-white{
   background: white;
-  border-bottom: 2px black solid;
-  color: limegreen;
+}
+.bd-white{
+  border: white 2px solid;
 }
 
 /* [text classes] */
@@ -218,86 +328,58 @@ j-class{
 .dark-stroke{
   stroke: rgba(75,75,85,1); 
 }
-.paragraph{
-  font-size: 18px;
+.text{
+  font-size: 1.125vw;
+}
+.title{
+  font-size: 3.5vw;
 }
 .sub-title{
-  font-size: 30px;
+  font-size: 3vw;
 }
-.h5{
+.bold-underline{
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* [media qeuries] */
-@media screen and (min-width: 160px){
-  .logo{
-    width: 100%; height: auto;
-  }
-  .banner-tray{
-    height: 10px;
-  }
-}
-
-@media screen and (min-width: 360px){
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 815px; top: 30px;
-  }
-}
-
-@media screen and (min-width: 640px){
-  body{
-    font-size: 1.4vw;
-  }
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 815px;; top: 2.75vw; width: 30%; height: auto;
-  }
-}
-
-@media screen and (min-width: 800px){
-  body{
-    font-size: 1.4vw;
-  }
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 815px;; top: 2.75vw; width: 30%; height: auto;
-  }
+/* [media qeuries template] */
+@media screen and (max-width: 1960px){
 }
 
 @media screen and (max-width: 800px){
-  body{
-    font-size: 1.4vw;
-  }
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 815px;; top: 2.75vw; width: 30%; height: auto;
-  }
 }
 
-/* [TV] */
-@media screen and (max-width: 1960px){
-  body{
-    font-size: 1.4vw;
-  }
-  .logo{
-    width: 50%; height: auto;
-  }
-  .banner-tray{
-    left: 815px;; top: 2.75vw; width: 30%; height: auto;
-  }
+@media screen and (max-width: 640px){
+}
+
+@media screen and (max-width: 360px){
+}
+
+@media screen and (max-width: 160px){
+}
+
+@media screen and (min-width: 800px){
 }
 
 /* [platform classes] */
+/* [google] */
+.google{ 
+  
+}
 .google-sheets{
   background-image: url(https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png);
+}
+.google-docs{
+  background-image: url(https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico);
+}
+
+/* [pi reel] */
+.pireel-1{
+  background-image: url(../img/logos/pireel-01.png);
+}
+.pireel-5{
+  background-image: url(../img/logos/pireel-05.png);
+}
+.pireel-core{
+  background-image: url(../img/pireel-icon.svg);
 }

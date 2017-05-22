@@ -49,140 +49,157 @@
 
 <!-- [stylesheet] -->
 <style type="text/css">
-@media screen and (min-width: 860px){
-    
-  
-}
 @media screen and (max-width: 1960px){
-  .blog{
-    position: absolute; width: 30%; height: calc(100% - 25px);
-    background-color: rgba(255,255,255,.5);
-  }
-  .svg-landscape-index{
-      width: 860px; height: 600px;
-  }
-  .svg-portrait-index{
-      width: 600px; height: 860px;
-  }
-  .paragraph{
-    font-size: .8vw;
-  }
-  .logo{
-    width: 25%;
-  }
-  .first-item{
-      border: none;
-      margin: 5px;
-  }
-  .form{
-      width: 99.5%; height: 98.25%;
-      background-color: rgba(255,177,17,.75);
-  }
-  #footer-banner{
-    position: fixed; left: 0%;top: 98%; width: 100%;
-    background: rgba(147,147,147,1);
-    font-size: .85vw;
-  }
-  #footer-banner:hover{
-      background-color: rgba(255,125,36,1);
-  }
-  #blog-canvas{
-    position: fixed; top: 30%; left: 0%; width: 100%; height: 67%;
-    background-color: rgba(145,145,245,.5);
-  }
-  #user-tray{
-    position: fixed; top: 25.5%; left: 0px; z-index: 10; width: 100%; height: 40px;
-    padding: 0px;
-    overflow: visible;
-  }
-  #top-tray{
-    position: fixed; width: 100%; height: auto; z-index: 10;
-    overflow: hidden;
-  }
-  #blog_select{
-    position: relative; height: 1.75vw; width: 30%; left: 160px; 
-    background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
-  }
-  #user-btn{
+    body{
+        font-size: .85vw;
+    }
+    body > j-tray:first-child{
+        height: 75px;
+    }
+    body > j-header:first-of-type{
+        height: 175px;
+    }
+    j-header + j-tray{
+        position: fixed; top: 250px; left: 0px; z-index: 10; width: 100%; height: 40px;
+        padding: 0px;
+        overflow: visible;
+    }
+    j-header > j-btn + j-curtain{
+        left: 25%;
+    }
+
+    body > json-canvas:first-of-type{
+        position: fixed; top: 290px; left: 0%; width: 100%; height: 67%;
+        background-color: rgba(145,145,245,.5);
+    }
+    j-tray > j-select + j-tray:last-child{
+        width: 65%;
+        float: left;
+    }
+    j-tray > j-el:first-child{
+        background: white;
+        color: rgb(75,75,75);
+        padding-left: 15px;
+        padding-top: 5px;
+        height: 100%;
+        font-weight: bold;
+    }
+
+    #blog_select{
+        position: relative; height: 1.75vw; width: 30%;
+        float: left;
+        background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
+    }
+    #selection_label{
+        position: relative;
+        float: left;
+    }
+
+    .blog{
+        position: absolute; width: 30%; height: calc(100% - 25px);
+        background-color: rgba(255,255,255,.5);
+    }
+    .svg-landscape-index{
+        width: 860px; height: 600px;
+    }
+    .svg-portrait-index{
+        width: 600px; height: 860px;
+    }
+    .paragraph{
+        font-size: .8vw;
+    }
+    .logo{
+        width: 25%;
+        height: 100%;
+    }
+    .first-item{
+        border: none;
+        margin: 5px;
+    }
+    .form{
+        width: 99.5%; height: 98.25%;
+        background-color: rgba(255,177,17,.75);
+    }
+    
+
+    #footer-banner{
+        position: fixed; left: 0%;top: 98%; width: 100%;
+        background: rgba(147,147,147,1);
+        font-size: .85vw;
+    }
+    #footer-banner:hover{
+        background-color: rgba(255,125,36,1);
+    }
+    #user-btn{
     position: absolute; left: 0px; top: 0px; 
-  }
-  #msg-btn{
+    }
+    #msg-btn{
     position: absolute; left: 30px; top: 0px; 
-  }
-  #selection_label{
-    position: absolute; left: 80px; top: 0px; 
-  }
-  #index-banner{
-    top: 2.5%; z-index: 10;
-    background: rgba(255,255,255,.7);
-  }
-  #banner-tray{
-    top: 0%; left: 25%; width: 50%;
-    font-size: 18px;
-  }
-  #que-tray{
-      position: absolute; top: 0%; left: 40%; width: 40%;
-  }
-  #get-involved-btn{
+    }
+    #get-involved-btn{
       position: absolute; top: 75%; width: 100px; height: 50px;
       background-color: rgba(255,177,17,1);
-  }
-  #form-promo{
+    }
+    #form-promo{
       width: 94%; height: 50%;
       background-color: rgba(255,255,255,1);
       margin: 1%;
       box-sizing: border-box;
-  }
-  #form-promo div[name="promo"]{
+    }
+    #form-promo div[name="promo"]{
       width: 92%; height: 60%;
       background: rgba(100,175,100,1);
       font-size: 1.125vw;
       box-sizing: border-box;
-  }
-  #promo-btn-list{
+    }
+    #promo-btn-list{
       position: absolute; top: 80%;
-  }
-  #user-inputs{
+    }
+    #user-inputs{
       position: absolute; top: 55%; width: 87%; height: 30%;
       margin: 1%;
       background-color: rgba(255,255,255,1);
-  }
-  #mozsprint_2017_talk-blog{
-  position: absolute; left: 0px; top: 95%; 
-  }
-  #pi_reel_docs-blog{
-  position: absolute; left: 620px; top: 95%;
-  }
+    }
+    #mozsprint_2017_talk-blog{
+    position: absolute; left: 0px; top: 95%; 
+    }
+    #pi_reel_docs-blog{
+    position: absolute; left: 620px; top: 95%;
+    }
+}
+
+@media screen and (min-width: 860px){
 }
 </style>
     </head>
 
     <body>
 <!-- [j-tray] -->
-        <j-tray id="top-tray" class="tray">
-            <j-el class="btn fa fa-user lite-text" title="Users"></j-el>
-            <j-el class="btn fa fa-envelope lite-text" title="Messages"></j-el>
-            <j-el class="fa fa-gears btn lite-text" title="Settings"></j-el>
-            <j-el class="fa fa-eye btn lite-text" title="Preferences"></j-el>
+        <j-tray id="top-tray" class="bg-pireGrey bd-pireGrey">
+            <j-tray>
+                <j-ico class="btn fa fa-user dark-text" title="Users"></j-ico>
+                <j-ico class="btn fa fa-envelope dark-text" title="Messages"></j-ico>
+                <j-ico class="fa fa-gears btn dark-text" title="Settings"></j-ico>
+                <j-ico class="fa fa-eye btn dark-text" title="Preferences"></j-ico>
+            </j-tray><br/>
+            <j-tray>
+                <j-ico class="pireel-core ico-btn"></j-ico> <strong class="inline-block"> ://Pi.Reel.WebApps || </strong>  
+                <j-ico class="google-docs ico-btn"></j-ico></j-el> <strong class="inline-block"> ://Pi.Reel.gDocs || </strong> 
+                <j-ico class="google-sheets ico-btn"></j-ico> <strong class="inline-block"> ://Pi.Reel.gSheets </strong> 
+            </j-tray>
             <?php
-            print "<j-el class='marker-board flt-right'>Welcome ".$_SESSION["username"].", today's date is ".$_SESSION["date"]." and the time is ".$_SESSION["time"]."</j-el>";
+            print "<j-messages class='top marker-board left-20'>Welcome ".$_SESSION["username"].", today's date is ".$_SESSION["date"]."</j-messages>";
             ?>
         </j-tray>
 
 <!-- [j-header] -->
         <j-header id="index-banner" class="header">
-            <a id="logo-button" class="inline-block h5" href="https://pireel.github.io/PiReel-Website/">
-                <img src="img/pireel.png" id="header-logo" class="logo"></img></a>
-
-            <j-tray id="banner-tray" class="abs tray paragraph lite-text" for="#logo-button">
-                <a class="inline-block" href="https://pireel.github.io/PiReel-Core/"><img src="img/pireel-icon.svg" height="16px" width="auto"></img> :// Pi.Reel.Webapp</a> <strong class="sub-title"> || </strong>  
-                <a class="inline-block" href="https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon6.ico" height="16px" width="auto"></img> ://Pi.Reel.Docs</a> <strong class="sub-title"> || </strong> 
-                <a class="inline-block" href="https://docs.google.com/spreadsheets/d/1Og-NWGqdMkRD0K3c9aOGVesWN-2tWInKRmnjf_-L4xg/edit?usp=sharing"><img src="https://ssl.gstatic.com/docs/spreadsheets/favicon_jfk2.png" height="16px" width="auto"></img> ://Planner.Sheet</a>
-            </j-tray>
+            <j-btn id="logo-button" class="logo pireel-1"></j-btn>
+            <j-curtain id="banner-tray" class="dark-text" for="#logo-button"></j-curtain>
         </j-header>
 
 <!-- [j-tray] -->
-        <j-tray id="user-tray" class="tray" for="#index-banner">
+        <j-tray id="user-tray" class="bg-pireGrey bd-pireGrey">
             <label id="selection_label" class="lite-text" for="blog-selection">Blogs: </label>
             <j-select id="blog_select" class="selection lite-text" visibility="hidden" 
                 data-queue="#que-tray"
@@ -194,13 +211,13 @@
                 <j-check class="fa fa-check" title="Select all"></j-check>
             </j-select>
 
-            <j-tray id="que-tray" class="tray">
-                <j-el class="h5 dark-text">Qued: </j-el>
+            <j-tray id="que-tray" class="bg-liteGreen bd-darkGreen height-fill">
+                <j-el>Qued: </j-el>
             </j-tray>
         </j-tray>
 
 <!-- [json-canvas] -->
-        <json-canvas id="blog-canvas" class="canvas display oFlow inline-block" data-layout=".canvas();.form();">
+        <json-canvas id="blog-canvas" class="canvas oFlow inline-block" data-layout=".canvas();.form();">
             <form id="blog_form" class="form abs small-margin first-item inline-block" action="lib/php/blog-vx1.php" target="_new" method="POST">
                 <fieldset id="form-promo" class="abs tray inline-block">
                     <legend class="display lite-text">READ ME</legend>
