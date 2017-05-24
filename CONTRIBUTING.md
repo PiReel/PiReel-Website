@@ -25,11 +25,11 @@ to pireelanimation@gmail.com, kipomaha@gmail.com, or mozillaomaha@gmail.com.
 ## What you'll NEED!
 
 We try to make it simple to contribute, but there are a few things that you'll need.
-  1. [Github](https://github.com) account: Required  
-  2. [Cloud 9](https://c9.io/pireel) account: Optional   
-  3. [Gitter](https://gitter.im/PiReel/Lobby) account: Optional  
+  1. [Github](https://github.com) account  
+  2. [Cloud 9](https://c9.io/pireel) account   
+  3. [Gitter](https://gitter.im/PiReel/Lobby) account  
 
-The only two accounts that are required are the Pi Reel and Github accounts. Technically, if you want to contribute you can just send us an e-mail with any thoughts or ideas, too. Even so we encourage you to join and make friends, network, and learn with us.
+Your not required to have any of these accounts. If you want to contribute you can just send us an e-mail with any thoughts or ideas, too. Even so we encourage you to join and make friends, network, and learn with us.
 
 ## Yearly
 
