@@ -1,25 +1,40 @@
+<!-- [Session] -->
 <?php 
+ini_set('session.gc_maxlifetime',60);
+ini_set('session.gc_probability',100);
+session_start();
 
-    session_start();
-    $_date = new DateTime();
-
-    $servername = getenv('IP');
-    $username = getenv('C9_USER');
-    $database = "c9";
-
-
-    // Create connection
-    $db = new PDO("mysql:host=".$servername.";dbname=".$database, $username);
-
-    // Check connection
-    if ($db->connect_error) {
-        die("Connection failed: " . $db->connect_error);
-    } 
-
-    $_SESSION["username"] = $username;
-    $_SESSION["date"] = $_date->format('m/d/Y');
-    $_SESSION["time"] = $_date->format("h:m a");
-
+$_date = new DateTime();
+// Check to see if user is posted to this page.
+    if($_POST["user_name"]){
+        if($_POST["user_name"] != "Pi Alpha"){
+            print "User name must Pi Alpha";
+        }
+        else{
+            $_SESSION["username"] = $_POST["user_name"];
+            $_SESSION["isLogged"] = "true";
+        }
+    }
+// Check to see if user is logg on.
+    if($_SESSION["isLogged"] == "true"){
+        $_SESSION["date"] = $_date->format('m/d/Y');
+    }
+    else{
+        $_SESSION["username"] = "New Visitor";
+        $_SESSION["date"] = $_date->format('m/d/Y');
+        $_SESSION["isLogged"] = "false";
+        $_SESSION["count"] = 0;
+    }
+// Check session count.
+    if($_SESSION["count"] < 1){
+        $_SESSION["load"] = "true";
+        $_SESSION["count"] = $_SESSION["count"]+1;
+        $_SESSION["reload"] = "false";
+        }
+    else if($_SESSION["count"] > 1){
+        $_SESSION["reload"] = "true";
+        $_SESSION["count"] = $_SESSION["count"]+1;
+    }
 ?>
 
 <!doctype html>
@@ -29,10 +44,9 @@
 <!--
     Author: Steven Van Sant
 -->
-
         <meta charset="utf-8"></meta>
         <meta name="description" content="Pi reel."></meta>
-        <meta name="keywords" content="computer science, cgi, json, json markup, web, social network, open source"></meta>
+        <meta name="keywords" content="computer science, web, blog, science blog, social network, open source blog"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,11 +55,12 @@
         <link rel="stylesheet" href="css/styles.css" type="text/css"></link>
 
 <!-- [load script] -->
-        <!--  <script type="text/javascript" src="js/x-tag-pi-reel.js"></script> -->
         <script type="text/javascript" src="node_modules/x-tag/dist/x-tag-core.js"></script>
-    <?php 
+
+<!-- [php title] -->
+<?php 
     print "<title>Welcome: ".$_SESSION["username"]." *</title>";
-    ?>
+?>
 
 <!-- [stylesheet] -->
 <style type="text/css">
@@ -57,70 +72,80 @@
         height: 75px;
     }
     body > j-header:first-of-type{
-        height: 175px;
+        height: 125px;
     }
     j-header + j-tray{
-        position: fixed; top: 250px; left: 0px; z-index: 10; width: 100%; height: 40px;
+        position: fixed; 
+        top: 200px; 
+        left: 0px; 
+        z-index: 10; 
+        width: 100%; 
+        height: 40px;
         padding: 0px;
         overflow: visible;
     }
     j-header > j-btn + j-curtain{
         left: 25%;
     }
-
     body > json-canvas:first-of-type{
-        position: fixed; top: 290px; left: 0%; width: 100%; height: 67%;
+        position: fixed; 
+        top: 240px; 
+        left: 0%; 
+        margin: 4px;
+        width: calc(100% - 8px); 
+        height: calc(100% - 260px);
         background-color: rgba(145,145,245,.5);
     }
     j-tray > j-select + j-tray:last-child{
-        width: 65%;
+        width: 60%;
         float: left;
     }
     j-tray > j-el:first-child{
         background: white;
         color: rgb(75,75,75);
         padding-left: 15px;
+        padding-right: 10px;
         padding-top: 5px;
         height: 100%;
         font-weight: bold;
     }
-
-    #blog_select{
-        position: relative; height: 1.75vw; width: 30%;
+    j-tray > label:first-child{
+        position: relative;
+        float: left;
+        background: white;
+        color: rgb(75,75,75);
+        padding-left: 15px;
+        padding-right: 10px;
+        height: 100%;
+        font-weight: bold;
+    }
+    j-tray > j-select:first-of-type{
+        position: relative; 
+        width: 30%; 
+        height: 100%;
         float: left;
         background-color: rgba(255,255,255,0); border: rgba(255,255,255,0);
     }
-    #selection_label{
-        position: relative;
-        float: left;
+    json-canvas > form:first-child{
+        height: 98%;
+        width: 100%;
+        background-color: rgba(255,177,17,.75);
+        border: ridge 2px rgba(255,177,17,.75);
     }
 
     .blog{
-        position: absolute; width: 30%; height: calc(100% - 25px);
+        position: absolute; 
+        width: 30%; 
+        height: calc(100% - 25px);
         background-color: rgba(255,255,255,.5);
     }
-    .svg-landscape-index{
-        width: 860px; height: 600px;
-    }
-    .svg-portrait-index{
-        width: 600px; height: 860px;
-    }
     .paragraph{
-        font-size: .8vw;
+        font-size: 1.25vw;
     }
     .logo{
         width: 25%;
         height: 100%;
     }
-    .first-item{
-        border: none;
-        margin: 5px;
-    }
-    .form{
-        width: 99.5%; height: 98.25%;
-        background-color: rgba(255,177,17,.75);
-    }
-    
 
     #footer-banner{
         position: fixed; left: 0%;top: 98%; width: 100%;
@@ -130,16 +155,7 @@
     #footer-banner:hover{
         background-color: rgba(255,125,36,1);
     }
-    #user-btn{
-    position: absolute; left: 0px; top: 0px; 
-    }
-    #msg-btn{
-    position: absolute; left: 30px; top: 0px; 
-    }
-    #get-involved-btn{
-      position: absolute; top: 75%; width: 100px; height: 50px;
-      background-color: rgba(255,177,17,1);
-    }
+
     #form-promo{
       width: 94%; height: 50%;
       background-color: rgba(255,255,255,1);
@@ -167,7 +183,6 @@
     position: absolute; left: 620px; top: 95%;
     }
 }
-
 @media screen and (min-width: 860px){
 }
 </style>
@@ -187,9 +202,12 @@
                 <j-ico class="google-docs ico-btn"></j-ico></j-el> <strong class="inline-block"> ://Pi.Reel.gDocs || </strong> 
                 <j-ico class="google-sheets ico-btn"></j-ico> <strong class="inline-block"> ://Pi.Reel.gSheets </strong> 
             </j-tray>
-            <?php
-            print "<j-messages class='top marker-board left-20'>Welcome ".$_SESSION["username"].", today's date is ".$_SESSION["date"]."</j-messages>";
-            ?>
+<?php
+    if($_SESSION["isLogged"] == "true"){
+        print "<form action='includes/php/superDuperSecret-vx1.php'><input type='submit' value='Sign out'></form>";
+    }
+    print "<j-messages class='top marker-board left-20'>Welcome ".$_SESSION["username"].", today's date is ".$_SESSION["date"]."</j-messages>";
+?>
         </j-tray>
 
 <!-- [j-header] -->
@@ -212,44 +230,33 @@
             </j-select>
 
             <j-tray id="que-tray" class="bg-liteGreen bd-darkGreen height-fill">
-                <j-el>Qued: </j-el>
+                <j-el>Qeued: </j-el>
+<!-- [php Qeued] -->
+<?php
+    if($_SESSION["isLogged"] == "false"){
+        print "Log on to start reading.";
+    }
+    else{
+        print "<j-ico></j-ico>";
+    }
+?>
+                
             </j-tray>
         </j-tray>
 
 <!-- [json-canvas] -->
-        <json-canvas id="blog-canvas" class="canvas oFlow inline-block" data-layout=".canvas();.form();">
-            <form id="blog_form" class="form abs small-margin first-item inline-block" action="lib/php/blog-vx1.php" target="_new" method="POST">
-                <fieldset id="form-promo" class="abs tray inline-block">
-                    <legend class="display lite-text">READ ME</legend>
-                    <div class="display abs" name="promo">
-                        <p class="dark-text">
-                            Share your Sci Fi imagination. 
-                        </p>
-                    </div>
-                    <div class="display abs" name="promo">
-                        <p class="block dark-text margin-medium">
-                            Anyone can be involved at Pi Reel including writers and graphic novelists.
-                            Pi Reel's open blog allows technical and creative writers to share there talents 
-                            and take part in open source and collaboration. 
-                        </p>
-                        <label class="lite=text" for="story-teller-checkbox">Are you a creative writer? </label><input id="story-teller-checkbox" name="storyteller" type="checkbox"/>
-                        <label class="lite=text" for="story-teller-checkbox">Are you a technical writer? </label><input id="technical-teller-checkbox" name="techteller" type="checkbox"/>
-                    </div>
-                    <div id="promo-btn-list">
-                        <input type="button" class="circle inline-block" name="" value="   " autofocus="true"/>
-                        <input type="button" class="circle inline-block" name="" value="   "/>
-                        <input type="button" class="circle inline-block" name="" value="   "/>
-                        <input type="button" class="circle inline-block" name="" value="   "/>
-                    </div>
-                </fieldset>
-                <fieldset id="user-inputs" class="display">
-                    <!-- [php] -->
-                    <?php
-                    print '<label for="user-name">Please enter a user name: </label><input type="text" name="user_name" value="'.$_SESSION["username"].'" readonly/><br/>';
-                    ?>
-                    <input type="submit" value="Be Involved" id="get-involved-btn" class="circle" />
-                </fieldset>
-            </form>
+        <json-canvas id="blog-canvas" class="canvas oFlow inline-block">
+
+<!-- [php canvas] -->
+<?php
+    if($_SESSION["isLogged"] == "false"){
+        include "includes/html/blog_entry-form.html";
+    }
+    else{
+        include "blogs/pireel/pireel-1.svg";
+    }
+?>
+
         </json-canvas>
 
 <!-- [footer] -->

@@ -4,7 +4,8 @@
     print "User name must Pi Alpha";
     }
     else{
-    print $_POST["user_name"];
+    $_SESSION["username"] = $_POST["user_name"];
+    $_SESSION["isLogged"] = "true";
     }
 
 ?>

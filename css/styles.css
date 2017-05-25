@@ -37,10 +37,25 @@ input[type="button"]:active{
 input[type="button"]:focus{
   background-color: yellow;
 }
+input[type="submit"]{
+  position: absolute; 
+  left: 90%;
+  top: 5%; 
+  width: 100px; 
+  height: 75px;
+  background-color: rgba(255,177,17,1);
+}
+
+label{
+  display: inline-block;
+  box-sizing: border-box;
+}
+
 form{
   box-sizing: border-box;
   display: inline-block;
 }
+
 fieldset{
   box-sizing: border-box;
   background: white;
@@ -93,11 +108,14 @@ json-canvas{
   display: block;
   box-sizing: border-box;
 }
+
 /* [j-select] */
 j-select{
-    position: relative; height: 100%;
-    display: inline-block; box-sizing: border-box;
-    overflow-Y: hidden; overflow-X: hidden;
+    position: relative; 
+    height: 100%;
+    display: inline-block; 
+    box-sizing: border-box;
+    overflow: hidden;
     background-color: rgba(255,255,255,.9);
 }
 
@@ -119,12 +137,12 @@ j-option:active{
   color: rgb(255,95,115);
 }
 
+/* [j-toggle] */
 j-toggle{
   position: absolute; 
-  left: 90%; 
-  top: 0%;
-  margin: 5px 0px 5px 5px; 
-  padding: 0px 5px 0px 5px; 
+  left: 91.95%; 
+  top: 15%;
+  padding: 3px;
   border: outset 2px; 
   border-radius: 100%;
   display: inline-block; 
@@ -144,10 +162,8 @@ j-toggle:active{
 }
 
 j-select > j-check, j-option > j-check{
-  position: absolute; left: 85%; top: 0%; z-index: 10; width: 5%; height: 100%;
+  position: absolute; left: 85%; top: 20%; z-index: 10; padding: 1.5%;
   background: white;
-
-  
 }
 j-select > j-check:hover, j-option > j-check:hover{
   background: skyblue; 
@@ -225,9 +241,11 @@ j-el{
   overflow-X: scroll; overflow-Y: scroll;
 }
 .form{
-  position: relative; width: 55%; height: 90%;
+  position: relative; 
+  width: 55%; 
+  height: 90%;
   border: 3px inset rgb(99,99,99);
-  background: rgba(245,245,255,1); fill: rgba(245,245,255,1);
+  background: rgba(245,245,255,1);
 }
 .blog{
   margin: 2.5% 5% 2.5% 5%;
