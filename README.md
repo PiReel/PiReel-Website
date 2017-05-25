@@ -8,7 +8,9 @@
 
 ### Our Products and Services
   Let me introduce to you Fire Rolie, Pi Reel's chief archive director. His job is to make sure that all information in the archive is accurate and up to date. He also over see's the design of Pi Reel's universal viewer.  
-  <img src="img/fire_rolie.png" width="20%" height="auto"></img>
+  <img src="img/fire_rolie.png" width="20%" height="auto"></img>  
+  
+Fire Rollies job is important, with out his viewer and his neat concise orderly way of storing data we couldn't even participate in Pi Reel open source. The "Fire Viewer" as he calls it will be capable of viewing common web formats including svg and mml. It also will be able to view Pi Reel animations and will also feature support for playing phone videos and other media.
   
 
 ### Activism  
@@ -24,16 +26,28 @@
 
   Pi Reel's mission statement speaks to the heart and life beat of the core animation web applicaiton. The core application otherwise known as the "Pi Reel Science and Engineering Animator" (PISEA) is built on top of a Cloud Server enabling people to share information instantly in animation, video, picture, right along instantly with related readable text information.  
 
-  This by itself isn't a solution, but it is a step in the right direction. We would love to know what your thinking and what questions you have and will be having an active conservation about it during the Mozilla Global Sprint. Please, check under projects "Mission Impossible Style" for more information.
+  This by itself isn't a solution, but it is a step in the right direction. We would love to know what your thinking and what questions you have and will be having an active conservation about it during the Mozilla Global Sprint. Please, check under projects ["Mission Impossible Style"](https://github.com/PiReel/PiReel-Website/projects/5) for more information.
 
 ### Our Beliefs and Values  
-  Our belief is that through art we can overcome obstacles and come together to learn and share our knowledge and dreams to create a better world.    
+Our belief is that through art we can overcome obstacles and come together to learn and share our knowledge and dreams to create a better world.  
+
+We value:
+
+1. Making lasting friendships. ( Collaboration and openness comes with time and being social after all. )  
+2. Being humane in our actions.  ( Your actions should be equal to the way you want to be treated. )  
+3. Sharing with others.  ( Working in the open entails being ready to share. )  
+
+Through Pi Reel's PISEA application we can uphold our values and make our beliefs reality. We hope you share our belief and our values, so that we can work together on bringing about a healthy world for us to live in.
 
 ### Resources and the Manual  
-  Our manual can be downloaded via, [Google Docs](https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing).  
+Our manual can be downloaded via, [Google Docs](https://docs.google.com/document/d/1JhZSIDOWfNYXMOPRvt6WDSX6lsT_1ktprTT3yyg4iDo/edit?usp=sharing).  
+
+Other resources you may need can be found in our GitHub Wikis. Below are the main landing pages for our Wikis:  
+1. [Website Wiki](https://github.com/PiReel/PiReel-Website/wiki).  
+2. [Animator Wiki](https://github.com/PiReel/PiReel-Core/wiki).  
 
 ### Contributing   
-  Thanks for your interest in contributing to Pi Reel! There are many ways to contribute. To get started, take a look at CONTRIBUTING.md.  
+  Thanks for your interest in contributing to Pi Reel! There are many ways to contribute. To get started, take a look at [CONTRIBUTING.md](CONTRIBUTING.md).  
 
 ### Participation Guidelines  
   This projects code of conduct can be found at the following link,  
