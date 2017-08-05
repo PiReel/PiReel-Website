@@ -12,6 +12,23 @@
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/index-gpage.css">
+        
+        <!-- [third party scripts] -->
+		<script src="node_modules/x-tag/dist/x-tag-core.js"></script>
+
+		<!-- [component scripts] -->
+		<script src="js/jx.js"></script>
+		<script src="js/animator.js"></script>
+		<script src="js/utilities.js"></script>
+		<script src="js/utilities-xhr.js"></script>
+		<script src="js/components.js"></script>
+		<script src="js/components-colors.js"></script>
+		<script src="js/components-jMenu.js"></script>
+		<script src="js/components-lists.js"></script>
+		<script src="js/components-editor.js"></script>
+		<script src="js/components-btns.js"></script>
+		<script src="js/components-flipdeck.js"></script>
+		<script src="js/syntax.js"></script>
 
         <title>Pi Reel</title>
     </head>
@@ -24,21 +41,32 @@
         </header>
 
 		<!-- ========== [main display] ========== -->
-        <main class="display">
-        </main>
+        <json-canvas id="main-display" class="block pireel-display" name="pireel-display" is="fire-viewer" 
+          extension-enabled="true">
+        </json-canvas>
+        
+        <!-- ========== [exentions component] ========== -->
+        
 
 		<!-- ========== [footer] ========== -->
         <footer>
             <nav class="inline-block">
+
+                <!-- ========== [Resource Links] ========== -->
                 <strong class="block">Resources</strong>
                 <a href="#"><strong title="block sub-title">Documentation</strong></a> 
 				<a href="http://x-tag.github.io/"><strong class="block">x-tag</strong></a>
                 <a href="https://www.apache.org/"><strong class="block">Apache</strong></a>
                 <a href="https://www.apachefriends.org/index.html"><strong class="block">XAMMP</strong></a>
+
+                <!-- ========== [Communication Channels] ========== -->
 				<strong class="block">Talk to us</strong>
            		<a href="https://github.com/PiReel"><strong class="block">GitHub Issues</strong></a>
             	<a href="https://gitter.im/PiReel/Lobby"><strong class="block">Gitter</strong></a>
+
             </nav>
+
+           <!-- ========== [Citations] ========== -->
             <cite class="inline-block">
             	<a href="#">Copyright and Legal notice</a>
             </cite>
