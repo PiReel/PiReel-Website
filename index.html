@@ -36,10 +36,10 @@
     <body>
 	    <!-- ========== [exentions component] ========== -->
 	    <web-ext lib-json="auto" meta-json="auto">
-	    	<fire-base>
+	    	<fire-base id="lib-JSON" data-href="url(includes/json/lib.json)">
 	    		
 	    	</fire-base>
-	    	<fire-base>
+	    	<fire-base id="lib-JSON" data-href="url(includes/json/meta.json)">
 	    		
 	    	</fire-base>
 	    </web-ext>
@@ -52,7 +52,7 @@
 
 		<!-- ========== [main display] ========== -->
         <json-canvas id="main-display" class="block pireel-display" name="pireel-display" is="fire-viewer" 
-          extension-enabled="true">
+          src="PiReel-FireViewer/index.html">
         </json-canvas>        
 
 		<!-- ========== [footer] ========== -->

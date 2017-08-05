@@ -66,7 +66,7 @@ var _keysPsuedo = xtag.pseudos.keys =
 // ********** [fire-base] ********** 
 var fBase = xtag.register( "fire-base", 
   {
-  mixins: ["utilities"],
+  mixins: ["utilities","requests"],
   lifecycle:
     {
     created: function()
@@ -74,21 +74,20 @@ var fBase = xtag.register( "fire-base",
       var jsn = null;
         console.log("%c Attempting to retrieve JSON from 'fire-base' content.", "color: skyblue; text-decoration: underline;");
         try{
-        var stg = this.innerHTML.replace(/\s+/g, " ");
-          jsn = JSON.parse(stg);
-          this.innerHTML = stg;
+          jsn = JSON.parse(this.innerHTML);
           console.log('%c JSON parsed and added to the jx.fire object.', "color: skyblue;");
           console.log(jx.fire);
-          jx.fire[this.id] = jsn;
+          jx.fire[this.id] = {json:jsn};
 		  console.log("%c JSON being pushed to jx.json.", "color: skyblue;");
 		  jx.json.push(jsn);
           console.log(jx.json);
       }
       catch(e){
+		
         console.log('%c ' + e,"color: skyblue;");
       }
-      jx.basing = jsn;
-      return jsn;
+
+	  return jsn;
       },
     inserted: function()
       {
