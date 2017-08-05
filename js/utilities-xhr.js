@@ -31,7 +31,7 @@ var xhrUtil = xtag.mixins.requests = {
 				_func(_doc);
 				}
 			  }, 200 );
-			return xhr;
+			return _doc;
 		  },
 		// ********** [type] **********
 		type: function(url_string,obj)
