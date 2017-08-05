@@ -105,8 +105,7 @@ var xhrUtil = xtag.mixins.requests = {
 			  jx.fireRequests[el.id].xhr = this.jLink( val );
 
 			  console.log("Setting the ready response.");
-			  jx.fire[this.id].reqDoc = this.jReady(jx.fireRequests[el.id].xhr,function(doc){
-				  console.log(doc);
+			  jx.fire[el.id].reqDoc = this.jReady(jx.fireRequests[el.id].xhr,function(doc){
 				  return doc;
 				  });
 
