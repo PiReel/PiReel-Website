@@ -28,7 +28,7 @@ var xhrUtil = xtag.mixins.requests = {
 				_doc = xhr.response;
 				console.log("Creating the document.");
 				//_doc = el.setMimeType(jx.fireRequests[el.id].type, xhr);
-				_doc = _func(_doc);
+				_doc = _func(_doc);console.log("HIII");console.log(_doc);
 				}
 			  }, 200 );
 			return _doc;
