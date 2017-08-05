@@ -1,0 +1,24 @@
+{
+	"steven_vansant": {
+		"projects": [
+			"sheet-metal",
+			"power-plants",
+			"derivitave-table-of-origins"
+		],
+		"contributors": {
+			"length": 1,
+			"names": ["steven_vansant"]
+		},
+		"contributions": [
+			"sheet-metal",
+			"power-plants",
+			"derivitave-table-of-orgins"
+		],
+		"contact": {
+			"public": true,
+			"email": "kipomaha@gmail.com",
+			"gitter": "https://gitter.im/pireel"
+		}
+	},
+	"length": 1
+}
