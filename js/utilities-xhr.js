@@ -28,7 +28,7 @@ var xhrUtil = xtag.mixins.requests = {
 				_doc = xhr.response;
 				console.log("Creating the document.");
 				//_doc = el.setMimeType(jx.fireRequests[el.id].type, xhr);
-				_func(_doc);
+				_doc = _func(_doc);
 				}
 			  }, 200 );
 			return _doc;
@@ -105,7 +105,7 @@ var xhrUtil = xtag.mixins.requests = {
 			  jx.fireRequests[el.id].xhr = this.jLink( val );
 
 			  console.log("Setting the ready response.");
-			  this.jReady(jx.fireRequests[el.id].xhr,function(doc){
+			  jx.fire[this.id].reqDoc = this.jReady(jx.fireRequests[el.id].xhr,function(doc){
 				  console.log(doc);
 				  return doc;
 				  });
