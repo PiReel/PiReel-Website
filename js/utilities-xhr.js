@@ -28,7 +28,7 @@ var xhrUtil = xtag.mixins.requests = {
 				_doc = xhr.response;
 				console.log("Creating the document.");
 				//_doc = el.setMimeType(jx.fireRequests[el.id].type, xhr);
-				_doc = _func(_doc);
+				_doc = _func(el, _doc);
 
 				}
 			  }, 200 );
@@ -106,7 +106,10 @@ var xhrUtil = xtag.mixins.requests = {
 			  jx.fireRequests[el.id].xhr = this.jLink( val );
 
 			  console.log("Setting the ready response.");
-			  jx.fire[this.id].reqDoc = this.jReady(jx.fireRequests[el.id].xhr,function(doc){console.log("hi");console.log(doc);
+			  jx.fire[this.id].reqDoc = this.jReady(jx.fireRequests[el.id].xhr,function(el, doc){
+				  console.log("Updating jx.fire..");
+				  jx.fire[el.id].reqDoc = doc;
+				  console.log(doc);
 				  return doc;
 				  });
 
