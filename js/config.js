@@ -56,6 +56,7 @@ var pi = {
 		
 	},
 	onPackageError: function(name, pkg, _func){
+		
 	},
 	onPackageLoad: function(name, pkg, _func){
 		var _r = null;
@@ -164,15 +165,15 @@ var scheme = {
 //**/ GLOBAL VARIABLES END /**//
 
 	/* ***** CUSTOM-ELEMENTS CHECK ***** */
-	if(scheme.items.hasScript("node_modules/core-2/lib/custom-elements.min.js") === false){
+	if(scheme.items.hasScript("src/custom-elements.min.js") === false){
 		let _scc = document.createElement("script");
-			_scc.src = "node_modules/core-2/lib/custom-elements.min.js";
+			_scc.src = "src/custom-elements.min.js";
 		document.head.appendChild(_scc);
 	}
 	/* ***** XTAG CHECK ***** */
-	if(scheme.items.hasScript("node_modules/core-2/src/core.js") === false){
+	if(scheme.items.hasScript("src/core.js") === false){
 		let _scx = document.createElement("script");
-			_scx.src = "node_modules/core-2/src/core.js";
+			_scx.src = "src/core.js";
 		document.head.appendChild(_scx);
 	}
 
