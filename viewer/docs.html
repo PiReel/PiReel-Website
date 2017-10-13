@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Snippet IDE Lite Documentation</title>
+	<link href="css/snippet-organizer_HelpDoc.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Notes: Start of the table of contents -->
+
+
+	<div id="Javascript-Snippet-IDE-Documentation" class="book">
+		<section id="book-title-page" class="book-title-page">
+			<h1 class="book-title">Javascript Snippet IDE Documentation</h1>
+			<p class="title-page-image"><img src="img/snippet-ide-screenshot.png" alt="javascript snippet I.D.E."></p>
+			<p class="citation">Written By Steven Van Sant</p>
+		</section>
+
+
+<!-- Notes: Start of the table of contents -->
+
+
+		<section id="table-contents" class="table-contents">
+			<h2 class="table-contents-title">Table of Contents</h2>
+			<ol class="chapter-list">
+				<li class="chapter-item"><a class="doc-link" href="#chapter1"><h3 class="title">Introduction to JS Snippet IDE</h3></a>
+					<ol class="sub-chapter-list">
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#usingSnippetIDE"><h4 class="title">Using the Snippet IDE</h4></a>
+							<ol class="sub-chapter-topic-list">
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#retrieveSnippets"><h5 class="title">Retrieving Snippets</h5></a></li>
+							</ol>
+						</li>
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#buildingBlocks"><h4 class="title">The Building Blocks</h4></a></li>
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#buildingExtensions"><h4 class="title">Building Extensions</h4></a></li>
+					</ol>
+				</li>
+				<li class="chapter-item"><a class="doc-link" href="#chapter2"><h3 class="title">Features of JS Snippet IDE Lite</h3></a>
+					<ol class="sub-chapter-list">
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#creatingSnippets"><h4 class="title">Creating Snippets</h4></a></li>
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#editingSnippets"><h4 class="title">Editing Snippets</h4></a></li>
+                    	<li class="sub-chapter-item"><a class="doc-link" href="#snippetCategories"><h4 class="title">Snippet Categories</h4></a>
+							<ol class="sub-chapter-topic-list">
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#regExpSnippets"><h5 class="title">Regular Expressions:</h5></a>
+									<ol class="sub-chapter-topic-item-list">
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#getElementHelp"><h6 class="title">The getElement() Function</h6></a></li>
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#calculateHelp"><h6 class="title">The calculate() Function</h6></a></li>
+									</ol>
+								</li>
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#setInt"><h5 class="title">Set Interval Snippets:</h5></a>
+									<ol class="sub-chapter-topic-item-list">
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#slideshowHelp"><h6 class="title">The slideShow() Function</h6></a></li>
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#calculateHelp"><h6 class="title">The Timeline Method</h6></a></li>
+									</ol>
+								</li>
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#dynamicWindows"><h5 class="title">Dynamic Window Snippets:</h5></a>
+									<ol class="sub-chapter-topic-item-list">
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#addBoxSetHelp"><h6 class="title">The addBoxSet() Function</h6></a></li>
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#toggleHelp"><h6 class="title">The toggle() Function</h6></a></li>
+									</ol>
+								</li>
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#svgManipulation"><h5 class="title">SVG Manipulation Snippets:</h5></a>
+									<ol class="sub-chapter-topic-item-list">
+										<li class="sub-chapter-topic-item-list-item"><a class="doc-link" href="#spokesHelp"><h6 class="title">The spokes() Function</h6></a></li>
+									</ol>
+								</li>
+							</ol>
+						</li>
+		                <li class="sub-chapter-title"><a class="doc-link" href="#insertObj"><h4 class="title">Insert Objects:</h4></a>
+							<ol class="sub-chapter-topic-list">
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#insertImg"><h5 class="title">Inserting Images</h5></a></li>
+								<li class="sub-chapter-topic-item"><a class="doc-link" href="#embedObjects"><h5 class="title">Embedding Objects</h5></a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+        </section>
+    </div><hr><hr>
+
+
+<!-- Notes: Start of book chapters -->
+
+
+	<div id="book-content-section" class="book">
+
+
+<!-- Note: Chapter 1 start -->
+
+
+ 		<section class="chapter" id="chapter1">
+			<h2 class="chapter-title">Introduction to the JS Snippet IDE Lite</h2>
+			<article class="sub-chapter" id="usingTheIDE">
+				<h3 class="sub-chapter-title">Using the Snippet IDE</h3>
+				<article class="sub-chapter-topic">
+					<h3 class="sub-chapter-topic-title" id="retrieveSnippets">Retrieving Snippets</h3>
+					<p class="text">
+	The snippet organizer has four categories to choose from and currently has a total of seven snippets. To navigate to any of them all you do 
+    is click one of the four buttons labeled with their respective snippet category on the menu besides the insert button.
+					</p>
+					<p class="text">
+	Once the menu for the snippet category you have chosen appears you can select any of the snippets that are built in or created by you
+    from the drop down selections at the top left of the menu. Once you have chosen a snippet and it prints out to the snippet display you can
+    press the Get Snippet button and confirm your selection by choosing yes or no. Clicking yes will insert the snippet at the last point you 
+    have selected in either of the text consoles, if you click no it will append it at the end of the document.
+					</p>
+				</article>
+			</article>
+			<article class="sub-chapter" id="buildingBlocks">
+				<h3 class="sub-chapter-title">The Building Blocks</h3>
+				<p class="text">
+	The following is for reference just in case you feel like making any new UI parts or adding more categories. As this
+	project progresses we will have youtube videos that will show you how this reference list can become a handy tool to add to the 
+	functionality of this snippet IDE.
+				</p>
+				<p class="text">The following is a list of id's for the UI parts of the Javascript Snippet IDE.</p>
+				<ol class="book-list">
+					<li class="book-list-item"><b class="framework-name-part">App container: </b><b class="attribute-id">js_lab_app</b>
+						<p class="text">
+	The application container is a form element that holds the text consoles and application menus. It's UI is fairly lite weight and offers
+	only the neccassary components you need to write code and retrieve snippets.
+						</p>
+					</li>
+					<li class="book-list-item"><b class="framework-name-part">Snippet menu: </b><b class="attribute-id">jsLabAppTools</b>
+						<p class="text">
+	The Snippet Menu holds the category selection buttons and the insert button.
+						</p>
+					</li>
+					<li class="book-list-item"><b class="framework-name-part">Javascript console: </b><b class="attribute-id">jsLabTextConsole</b>
+						<p class="text">
+	The Javascript Console is used to create and display snippets.
+						</p>
+					</li>
+					<li class="book-list-item"><b class="framework-name-part">HTML console: </b><b class="attribute-id">htmlLabTextConsole</b>
+						<p class="text">
+	The HTML Console is to create and diplay the markup part of your snippets. You can also insert style elements into it as well.
+						</p>
+					</li>
+				</ol>
+				<p class="text">The following is a list of id's that are used for UI items that are generated by an event.</p>
+				<ol class="book-list">
+					<li class="book-list-item"><b class="framework-name-part">Snippet prompt win: </b><b class="attribute-id">_prompt_Section</b>
+						<p class="text">
+	The Snippet Prompt Window is activated when you press the Get Snippet button. It retrieves the snippet you have selected form the category
+	menu you are currently browsing. It has two options that allow you to append the snippet at the end of the document or to insert it at a select point
+	in the consoles. To learn more please read the <a href="#retrieveSnippets">Retrieveing Snippets</a> section.
+						</p>
+					</li>
+					<li class="book-list-item"><b class="framework-name-part">Executed doc win: </b><b class="attribute-id">_document</b>
+						<p class="text">
+	The Executed Document Window is the window where all your code will be executed in. It's important to note that this Snippet IDE doesn't work for code
+    that appends elements outside of this display. (Since you won't be able to view it.) This winow appears when you use the execute button on the right
+    side of the screen.
+						</p>
+					</li>
+				</ol>
+				<p class="text">The following are the Create and Edit menu UI parts and there id's.</p>
+				<ol class="book-list">
+					<li class="book-list-item"><b class="framework-name-part">Save Form: </b><b class="attribute-id">saveForm</b>
+						<p class="text">
+	The save form contains the inputs to create new snippets and categories. To gain access to the save form all you have to do is press the 
+    create button, and the menu will appear. The form's required blocks are dependent on which option you choose from the category drop down
+    list. To learn more review the <a href="#creatingSnippets">Creating Snippets and Categories</a> section.
+						</p>
+					</li>
+					<li class="book-list-item"><b class="framework-name-part">Edit Form: </b><b class="attribute-id">edit-options</b>
+						<p class="text">
+	The edit form contains the inputs to edit any snippets in the organizer. It's accessed by pressing the edit button at the top of the screen.
+	The form only requires you to choose a snippet from the drop down category other than none. Please refer to the <a href="editingSnippets">Editing Snippets 	
+    </a> section for more info.
+						</p>
+					</li>
+				</ol>
+				<p class="text">
+	The following are a list of id's that are used for the HTML snippet memory. To learn more about how the application stores the snippets its
+    best to skip to the <a href="#snippetCategories">Snippets Memory Docs</a> section, there you'll find the template for creating categories and 
+	snippets.
+				</p>
+				<ol class="book-list">
+					<li class="book-list-item"><b class="framework-name-part">Reg exp memory: </b><b class="attribute-id">regExp_Snippet</b></li>
+					<li class="book-list-item"><b class="framework-name-part">Set int memory: </b><b class="attribute-id">setInt_Snippet</b></li>
+					<li class="book-list-item"><b class="framework-name-part">Dyn win memory: </b><b class="attribute-id">dynamicWin_Snippet</b></li>
+					<li class="book-list-item"><b class="framework-name-part">SVG manip memory: </b><b class="attribute-id">menu_svgManip</b></li>
+   				</ol>
+				<p class="text">
+	The following are a list of id's that are used for the category window memory. 
+				</p>
+				<ol class="book-list">
+					<li class="book-list-item"><b class="framework-name-part">Insert win: </b><b class="attribute-id">menu_Insert</b></li>
+					<li class="book-list-item"><b class="framework-name-part">Reg exp win: </b><b class="attribute-id">menu_regExp</b></li>
+					<li class="book-list-item"><b class="framework-name-part">Set int win: </b><b class="attribute-id">menu_setInt</b></li>
+					<li class="book-list-item"><b class="framework-name-part">Dynamic menu win: </b><b class="attribute-id">menu_dynamicMenus</b></li>
+					<li class="book-list-item"><b class="framework-name-part">SVG manip win: </b><b class="attribute-id">menu_svgManip</b></li>
+   				</ol>
+			</article>
+			<article class="sub-chapter" id="buildingExtensions">
+				<h3 class="sub-chapter-title">Building Extensions</h3>
+				<p class="text">
+	 Building extensions is easy, all that is required is that you have an up to date browser and the zip file that contains all the nessary
+     files. You can get the download from Kip Omaha by clicking <a href="www.kipOmaha.org/snippetOrganizer.snippetOrganizer.html">here</a> or going to 
+     our Git Hub <a href="https://github.com/KipOmaha">here</a>. Feel free to sign up for our Javascript Snippet IDE and Organizer developer forums free to get help in building 
+     your extensions.
+				</p>
+			</article>
+		</section>
+		<hr><hr>
+
+
+<!-- Note: Chapter 2 start -->
+
+
+ 		<section class="chapter" id="chapter2">
+			<h2 class="chapter-title">Features of JS Snippet IDE Lite</h2>
+			<article class="sub-chapter" id="savingApplication">
+				<h3 class="sub-chapter-title">Saving your Snippets Before you Exit the Browser.</h3>
+				<p class="text">
+	Saving your files is easy since the program is based off of the usability of the browser your executing the HTML file in, but it may vary from
+	browser to browser. These instructions are for Mozilla, Google, and Microsofts browsers. We'll start with the hardest one which is Microsoft's new
+    browser MS Edge. 
+				</p>
+				<p class="text">
+	<b class="title-instruct">MS Edge: </b>
+    				<ol class="list-instruct">
+						<li>
+	Find the button in the top right corner that says more when its hovered and click it. Choose the option that says open with 
+    Internet Explorer.							
+						</li>
+						<li>
+	Press control and "s" on the keyboard, wait unitl the dialog window pops up, and than locate the appropriate directory.
+						</li>
+					</ol>
+				</p>
+				<p class="text">
+	<b class="title-instruct">MS Internet Explorer: </b>
+    				<ol class="list-instruct">
+						<li>
+	Press control and "s" on the keyboard, wait unitl the dialog window pops up, and than locate the appropriate directory.
+						</li>
+					</ol>
+				</p>
+				<p class="text">
+	<b class="title-instruct">Mozilla Firefox: </b>
+    				<ol class="list-instruct">
+						<li>
+	Press control and "s" on the keyboard, wait unitl the dialog window pops up, and than locate the appropriate directory.
+						</li>
+					</ol>
+				</p>
+				<p class="text">
+	<b class="title-instruct">Google Chrome: </b>
+    				<ol class="list-instruct">
+						<li>
+	Press control and "s" on the keyboard, wait unitl the dialog window pops up, and than locate the appropriate directory.
+						</li>
+					</ol>
+				</p>
+			</article>
+			<article class="sub-chapter" id="creatingSnippets">
+				<h3 class="sub-chapter-title">Creating Snippets</h3>
+				<p class="text">
+	<b>Remember: </b>The application has two built in text consoles, one for Javascript and the other for HTML. The snippets are printed to these consoles
+	when you select the snippet that you need. You can also use them to code, but the consoles don't support any code help or coloring. 
+    The snippets that the organizer comes pre-packaged with are under the <a href="#snippetCategories">Snippet Categories</a>
+    sub topic.
+				</p>
+				<h4 class="title-text">Simple steps to take.</h4>
+				<p class="text">
+	To create a snippet is simple, the button to activate the snippet creator menu is located at the top right next to the 
+    <em class="book-emphasis">"Edit"</em> button.
+				</p>
+				<ol class="book-list-instruct">
+					<li><h4>Step 1:</h4>
+						<p class="text">
+	Choose the category you want to save the snippet to from the drop down list, or create a new category by using the input next to the
+	drop down list located at the top of the menu.
+						</p>
+                    </li>
+					<li><h4>Step 2:</h4>
+						<p class="text">
+	The form provides text inputs for you to create snippest, below is a list of those inputs and there associated controls
+						</p>
+							<ol class="book-list">
+								<li>Snippet Category Selection. <b>(Non editable.)</b></li>
+								<li>Snippet Category Title Input</li>
+								<li>Snippet Title Input</li>
+								<li>Snippet Description Input</li>
+								<li>Snippet Parameter Inputs <b>(Add parameter button)</b></li>
+								<li>Snippet Rule Inputs <b>(Add rule button)</b></li>
+								<li>Snippet Return Input</li>
+								<li>Snippet Javascript Input <b>(Paste from js console)</b></li>
+								<li>Snippet HTML Input <b>(Paste from html console.)</b></li>
+							</ol>
+							<p class="text">
+	You can add any of the snippet's values that are currently selectable from drop down list with values. It's important to remember that
+	none of the inputs are necassary (Except for the category input options and the snippet title input.), but if you don't complete the form
+	the snippet that is created will still have a spot for that part except that it will be blank.
+							</p>
+                    </li>
+					<li><h4>Step 3:</h4>	
+						<p class="text">
+	When you are done making your snippets all you have to do is click the save button on the bottom of the form.
+						</p>
+					</li>
+					<li><h4>Optional step 4:</h4>
+						<p class="text">
+	When you are all done you should press control "s" to save your work permanently.<br>
+	<b>(If you don't the snippet will only survive for the browser session.)</b>
+						</p>
+					</li>
+				</ol>
+            </article>
+			<article class="sub-chapter" id="editingSnippets">
+				<h3 class="sub-chapter-title">Editing Snippets</h3>
+				<p class="text">
+	<b>Remember: </b>The application has two built in text consoles, one for Javascript and the other for HTML. The snippets are printed to these consoles
+	when you select the snippet that you need. You can also use them to code, but the consoles don't support any code help or coloring. 
+    The snippets that the organizer comes pre-packaged with are under the <a href="#snippetCategories">Snippet Categories</a>
+    sub topic.
+				</p>
+				<h4 class="title-text">Simple steps to take.</h4>
+				<p class="text">
+	To edit a snippet is simple, the button to activate that menu is located at the top right next to the <em class="book-emphasis">"Create"</em> button.
+				</p>
+				<ol class="book-list-instruct">
+					<li><h4>Step 1:</h4>
+						<p class="text">
+	Choose the snippet you want to edit from the drop down list located at the top of the menu.
+						</p>
+                    </li>
+					<li><h4>Step 2:</h4>
+						<p class="text">
+	The form provides text inputs for you to edit the snippet, below is a list of those inputs and there associated controls
+						</p>
+							<ol class="book-list">
+								<li>Snippet Title Selection. <b>(Non editable.)</b></li>
+								<li>Snippet Title Input</li>
+								<li>Snippet Description Input</li>
+								<li>Snippet Parameter Inputs <b>(Add parameter button)</b></li>
+								<li>Snippet Rule Inputs <b>(Add rule button)</b></li>
+								<li>Snippet Return Input</li>
+								<li>Snippet Javascript Input <b>(Paste from js console)</b></li>
+								<li>Snippet HTML Input <b>(Paste from html console.)</b></li>
+							</ol>
+							<p class="text">
+	You can replace any of the snippet's values that are currently selectable from drop down list with new values with new values by 
+	overwriting the current snippet values.
+							</p>
+                    </li>
+					<li><h4>Step 3:</h4>
+						<p class="text">
+	When you are done making your changes all you have to do is click the save button on the bottom of the form.
+						</p>
+					</li>
+					<li><h4>Optional step 4:</h4>
+						<p class="text">
+	When you are all done you should press control "s" to save your work permanently.<br>
+	<b>(If you don't the snippet will only survive for the browser session.)</b>
+						</p>
+					</li>
+				</ol>
+            </article>
+			<article class="sub-chapter">
+				<h3 class="sub-chapter-title" id="snippetCategories">Snippet Categories</h3>
+				<p class="text">
+	The four built in snippet categories have examples that range from matching numbers to manipulating SVG. Below I have listed the 
+    the snippets organized by topic.
+				</p>
+				<article class="sub-chapter-topic">
+					<h3 class="sub-chapter-topic-title" id="regExpSnippets">Regular Expression Snippets</h3>
+					<article class="sub-chapter-topic-item" id="getElementHelp">
+						<h4 class="topic-item-title">The getElement() Function</h4>
+						<p class="text">
+	This function is useful if you don't won't to use the <code class="book-inline-code">document.getElementsBy...</code> methods provided by Javascript. 
+	It's parameter excepts the following format:<br>
+	<code>myElement|#;</code>.
+						</p>
+						<p class="text">
+	It's a simple (value)/(command) syntax seperated by a vertical bar followed by a semi-colon. 	
+						</p>
+						<p class="text">
+	Other commands you can use are period (.), underscore (_), or "blank". The dot means class and the underscore means name. Leaving nothing
+    or keeping it blank means tag name. (Remember that the pound symbol (#) means id.)
+						</p>
+					</article>
+					<article class="sub-chapter-topic-item" id="calculateHelp">
+						<h4 class="topic-item-title">The calculate() Function</h4>
+						<p classs="text">
+	The <code class="book-inline-code">calculate(_syntax)</code> function is used to do summations. It's parameter uses a syntax similar to the 
+	getElement() function, but instead of only one value it has three values followed by a plus or minus sign to indicate direction. Here is an example 
+	of the format <code class="book-inline-code">0|10|2|+;</code>
+						</p>
+						<p class="text">
+	The first number on the left is the summation start point, the second number is the number of iterations, and the final number is the amount of
+    increment or decrement depending on the directional symbol you use before the semi-colon.
+						</p>
+					</article>
+				</article>
+				<article class="sub-chapter-topic">
+					<h3 class="sub-chapter-topic-title" id="intervalHelp">Set Interval Snippets</h3>
+					<article class="sub-chapter-topic-item">
+						<h4 class="topic-item-title">The slideShow() Function</h4>
+						<p class="text">
+	The slide show interval function is simple function that iterates through a set of images nested inside the element with the id value "slideShow".
+	As the interval executes you can easily create custom effects by replacing the setAttribute("class") from empty to your own custom class.
+						</p>
+					</article>
+					<article class="sub-chapter-topic-item" id="timelineHelp">
+						<h4 class="topic-item-title">The Timeline Method</h4>
+						<p class="text">
+	The Timeline snippet provides a function named <code class="book-inline-code">addIntervalListener(_func,_interval)</code>. The method works by 
+	updating an array that stores information regarding when to execute a function. In this way you can set up multiple events that execute functions
+    at different times using only one interval.
+						</p>
+						<p class="text">
+	The method's needed functions are the updateIntervalListener() and the intervalScan() function. It has one array and on contructor function for
+    storing information and creating new peices of interval data.
+						</p>
+					</article>
+				</article>
+				<article class="sub-chapter-topic">
+					<h3 class="sub-chapter-topic-title">Dynamic Window Snippets</h3>
+					<article class="sub-chapter-topic-item" id="menuSetHelp">
+						<h4 class="topic-item-title">The menuSet() Function</h4>
+						<p class="text">
+	The menuSet() function allows you to create a menu that shares a common window. In this way you can create different sets of buttons that all
+    have a unique style of pop up menu.
+						</p>
+					</article>
+					<article class="sub-chapter-topic-item" id="toggleHelp">
+						<h4 class="topic-item-title">The toggle() Function</h4>
+						<p class="text">
+	The toggle function allows you to create a button the switches the view of an element between two states. In this case we have it set to hidden and
+	displayed.
+						</p>
+					</article>
+				</article>
+				<article class="sub-chapter-topic">
+					<h3 class="sub-chapter-topic-title">SVG Manipulation Snippets</h3>
+					<article class="sub-chapter-topic-item" id="clonesHelp">
+						<h4 class="topic-item-title">The spokes() Function</h4>
+						<p class="text">
+	The <code class="book-inline-code">spokes( _svgNodeList, _center, _radius, _initialAngle, _angleIncrement )</code> function places a set of svg 
+	elements on an elliptical path for you. It makes designing funner and help you move away from a square box model style. 
+						</p>
+						<p class="text">
+	The first parameter, _svgNodeList, is the class name of the set of svg elements you want to be placed. It is very important to remember to pass a
+	properly formatted svg element into this function or your object will not be target correctly.
+						</p>
+					</article>
+	            </article>
+            </article>
+
+			<article class="sub-chapter">
+				<h3 class="sub-chapter-title">Insert Objects</h3>
+				<p class="text">
+	The IDE also has an insert button that allows you to embed content automatically. It's located to the left of the category menu up top.
+	There are a couple of steps that go along with using the insert menu. You can review them read them below.
+				</p>
+				<ol class="book-list">
+					<li><b>Step 1:</b>
+						<p class="text">
+	Click the appropriate checkbox and fill out it's related text box with the path of your image or object file.
+						</p>
+					</li>
+					<li><b>Step 2:</b>
+						<p class="text">
+	Click generate tag snippet than a preview snippet will appear in the textarea to the right of the path inputs. Make sure your snippets are correct
+    and than hit insert html.
+						</p>
+					</li>
+				</ol>
+				<p class="text">
+	Thats all there is to that except one more thing. Remember that the image or object element will placed in the HTML text console the last place you 
+	left the cursor so be sure to place the cursor in the correct place.
+				</p>
+            </article>
+		</section><hr><hr>
+
+
+<!-- Notes: Chapter 3 -->
+
+
+ 		<section class="chapter" id="chapter3">
+			<h2 class="chapter-title">Online Portal</h2>
+			<p class="text">
+	The online portal allows you to connect with others, update your organizer, and get access to our Web Cam Discussion Groups. It's a great resource
+    if you want to try out our organizer. Our Web Cam Discussion Groups cover everything from creating extensions to new snippets were thinking of 
+    adding to our repository.
+			</p>
+			<article class="sub-chapter">
+				<h3 class="sub-chapter-title">Forums</h3>
+				<p class="text">
+	This is a members only forum for those who are interested in being a part of Kip's HTML application project. It's goal is to provide a place for
+	people who use our apps to discuss snippets and collaborate on projects with each other.
+				</p>
+				<p class="text">
+	To get access to the forum click the Kip Omaha link in the right corner of the application. This link will open up a new window or tab and take
+    you to the forums home page.
+				</p>
+			</article>
+			<article class="sub-chapter">
+				<h3 class="sub-chapter-title">Web Cam Discussion Groups</h3>
+				<p class="text">
+	Web Cam Discussion Groups are moderated Kip Events that are held every month. We teach web literacy, open learning formats, and discuss current
+    topics regarding science and engineering.  
+				</p>
+				<p class="text">
+	You can find a list of our monthly events by go clicking the Kip Omaha link in the right corner of the application. This link will open up a new 
+	window or tab and take you to the forums home page.
+				</p>
+			</article>
+		</section>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);stroke:#000000;stroke-miterlimit:10;}
+	.st1{stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st3{font-family:'SegoePrint';}
+	.st4{font-size:63px;}
+</style>
+<radialGradient id="SVGID_1_" cx="436.5" cy="236" r="276.7329" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#878787"/>
+</radialGradient>
+<ellipse class="st0" cx="436.5" cy="236" rx="360" ry="153.5"/>
+<polygon class="st1" points="350.8,247.7 274,161.3 397.2,74.7 442.5,275.5 374.5,324.5 256.5,264.5 293.5,204.5 275.5,182.5 
+	93.5,299.5 309.5,335.5 126.5,335.5 "/>
+<text onmouseover="console.log(this)" transform="matrix(0.9973 7.319543e-02 -7.319543e-02 0.9973 251.0098 314.5019)" class="st2 st3 st4">JX Viewer</text>
+</svg>

@@ -1,0 +1,427 @@
+/**********
+	CSS stylesheet	
+**********/
+body {
+	font-family: "Open Sans", sans-serif; 
+}
+ol{
+	list-style:inside decimal;
+}
+input,textarea{
+	padding: 1.5mm;
+	padding-left: 3mm;
+	padding-right:3mm;
+	border-radius: 3mm;
+	background-color: white;
+}
+fieldset{
+	border: none;
+}
+
+/* Text styles */
+.title{
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+	font-weight:normal; color:rgba(45,45,45,1);
+}
+
+/* core utility classes */
+.memory{
+	position:absolute; top:0mm; left:0mm; width:0mm; height:0mm;
+	overflow:hidden;visibility:hidden;
+}
+.display{
+	margin: 5%;
+	display: block;
+}
+
+/* main classes */
+.application-bar{
+	background-color: rgba(255,255,255,.35);
+}
+.application-container{
+	position: absolute;
+	display: block;
+}
+.application-textarea{
+	position:relative;
+	display: block;
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	font-size:15px; font-weight:normal;
+	color:rgba(30,30,30,1);
+}
+.application-label{
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:normal; color:rgba(45,45,45,1); font-size:15px; letter-spacing:1px;
+}
+.application-button{
+	font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	text-align: center;
+	color:rgba(85,85,85,1);
+	border: none;
+	background-color:rgba(200,200,200,.1);
+	display: block;
+}
+.application-button:hover{
+	border-style: inset;
+	border-color: yellow;
+}
+.application-link{
+	font-family: cursive;
+	text-align:center;
+	text-decoration: underline;
+	color:rgba(85,85,215,1);
+	background-color:rgba(255,255,255,1);
+}
+.application-link:hover{
+	color:rgba(255,0,0,1);
+}
+.viewer{
+	position:absolute;
+	display: inline-block;
+	background-color: white;
+}
+.f_right{
+	float: right;
+}
+.m_left{
+	margin-left: 2px;
+}
+
+/* [media queries] */
+/* [tablet/phone] */
+@media only screen and (min-width: 320px) {
+	#main-viewer{
+	width: 100%; height: 70%;
+	left:0%; top: 23%;
+	}
+	#user-docs{
+	position: relative;
+	left: auto; top: auto;
+	width:40%; height: 60.5%;
+	margin-right: 4.5vw;
+	display: inline-block;
+	}
+	#comment-board{
+	position: relative;
+	left: auto; top: auto;
+	width:40%; height: 60.5%;
+	margin-right: 4.5vw;
+	display: inline-block;
+	}
+	#user-docs-textarea{
+	position: absolute;
+	top: 30%;
+	width:100%; height: 75%;
+	resize:both;
+	}
+	#comment-textarea{
+	position: absolute;
+	top: 30%;
+	width:100%; height: 75%;
+	resize:both;
+	}
+	#file-menu{
+	position: absolute;
+	left: 0%; top: 9%;
+	width:70%; height: 12%;
+	margin: 0px; padding: 0px;
+	}
+	#file-tool{
+	position: absolute;
+	left: 0%; top: 0%;
+	width:80%; height: 6%;
+	margin: 0px; padding-right: 1%; padding-left: 1%;
+	}
+	#slide-console-btn{
+	position:absolute;
+	left: 88%; top: 0%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	#console-tools-btn{
+	position:absolute;
+	left: 88%; top: 18%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	#user-textarea .application-button{
+	width: 2.25vw; height: 2.25vw;
+	padding: .25vw;
+	font-size: 1.5;
+	}
+	#file-menu .application-button{
+	margin-top: .75%; margin-left: 1px;
+	font-size: 6.5vw;
+	}
+	#file-tool .application-button{
+	top: 10%;
+	margin-top: .75%; margin-right: 3px;
+	font-size: 6.5vw;
+	}
+	#file-tool .application-link{
+	margin-top: .75%; margin-right: 3px;
+	font-size: 4.5vw;
+	}
+	.application-html{
+	position:fixed; margin:0mm; left:0mm; top:0mm; width:100%; padding:5mm; height:100%;
+	background-color:rgba(100,100,225,1); 
+	overflow-X:scroll; overflow-Y:scroll;
+	}
+	.application-button{
+	margin-top: .75%; 
+	font-size: 1vw;
+	}
+	.application-menu{
+	position: absolute;
+	left: 0%; top: 0%;
+	background-color:rgba(255,255,255,1);
+	}
+	.application-console{
+	position: fixed;
+	left: 0%; top: 0%;
+	width: 0%; height: 0%; 
+	opacity: 0;
+	overflow: hidden; display: block;
+	}
+	.title{
+	font-size: 1.5vw;
+	}
+	legend.title{
+	border-radius: 50px;
+	padding-left: 9px; padding-right: 9px;
+	background-color: rgba(175,175,175,1);
+	font-size: 4.5vw;
+	}
+}
+
+/* [labtop/desktop] */
+@media only screen and (min-width: 1280px) {
+	#main-viewer{
+	width: 60%; height: 55%;
+	left: 30%; top: 29%;
+	}
+	#user-docs{
+	position: absolute;
+	left: 0%; top: 51%;
+	width:88%; height: 48%;
+	}
+	#comment-board{
+	position: absolute;
+	left: 0%; top: 0%;
+	width:88%; height: 48%;
+	}
+	#user-docs-textarea{
+	top: 25%;
+	width:95%; height: 60%;
+	resize:both;
+	}
+	#comment-textarea{
+	top: 25%;
+	width:95%; height: 60%;
+	resize:both;
+	}
+	#comment-board-menu{
+	height: auto;
+	margin-bottom: 1%;
+	}
+	#user-docs-menu{
+	height: auto;
+	margin-bottom: 5%;
+	}
+	#file-menu{
+	position: absolute;
+	left: 0%; top: 12%;
+	width:90%; height: 15%;
+	margin: 0px; padding: 1px;
+	background-color: rgba(255,255,255,1);
+	}
+	#file-tool{
+	position: absolute;
+	width:95%; height: 9%;
+	left: 0%; top: 0%;
+	background-color: rgba(255,255,255,1);
+	}	
+	#slide-console-btn{
+	position:absolute;
+	left: 92%; top: 0%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	#console-tools-btn{
+	position:absolute;
+	left: 92%; top: 10%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	.application-html{
+	position:fixed; margin:0mm; left:0mm; top:0mm; width:100%; padding:5mm; height:100%;
+	background-color:rgba(100,100,225,1); 
+	overflow-X:scroll; overflow-Y:scroll;
+	}
+	#file-menu .application-button{
+	margin-top: .75%; margin-left: 3px;
+	font-size: 1.5vw;
+	}
+	#file-tool .application-button{
+	margin-top: .75%; margin-right: 3px;
+	font-size: 1.5vw;
+	}
+	#comment-board .application-button{
+	margin-right: 3px;
+	font-size: 1.5vw;
+	}
+	#file-tool .application-link{
+	margin-top: .75%; margin-right: 10px;
+	font-size: 1.5vw;
+	}
+	#user-docs .application-button{
+	margin-right: 3px;
+	font-size: 1.5vw;
+	}
+	#user-textarea .application-button{
+	width: 1vw; height: 1vw;
+	padding: .25vw;
+	font-size: .85vw;
+	}
+	.application-menu{
+	position: width;
+	left: 0%; top: 0%;
+	background-color:rgba(255,255,255,1);
+	}
+	.application-console{
+	position: absolute;
+	left: 0%; top: 29%;
+	width: 25%; height: 50%;
+	background-color: rgba(200,200,200,.9);
+	border-color: rgba(35,35,35,1); border-left: none;
+	opacity: 1;
+	overflow: hidden; display: block;
+	}
+	.title{
+	font-size: 1.25vw;
+	}
+	legend.title{
+	border-radius: 50px;
+	padding-left: 9px; padding-right: 9px;
+	background-color: rgba(175,175,175,1);
+	font-size: 1.2vw;
+	}
+} 
+
+/* [min-height overides] */
+@media only screen and (max-height: 500px) {
+	#main-viewer{
+	width: 75%; height: 80%;
+	left: 23%; top: 19%; 
+	}
+	#user-docs{
+	position: relative;
+	left: auto; top: auto;
+	width:40%; height: 60.5%;
+	margin-right: 4.5vw;
+	display: inline-block;
+	}
+	#comment-board{
+	position: relative;
+	left: auto; top: auto;
+	width:40%; height: 60.5%;
+	margin-right: 4.5vw;
+	display: inline-block;
+	}
+	#user-docs-textarea{
+	position: absolute;
+	top: 30%; left: 0%;
+	width:100%; height: 75%;
+	resize:both;
+	}
+	#comment-textarea{
+	position: absolute;
+	top: 30%;
+	width:100%; height: 75%;
+	resize:both;
+	}
+	#file-menu{
+	position: absolute;
+	left: 0%; top: 15%;
+	width:20%; height: 71%;
+	margin: 0px; padding: 0px;
+	}
+	#file-tool{
+	position: absolute;
+	left: 0%; top: 0%;
+	width:93%; height: 9%;
+	margin: 0px; padding-right: 5%; padding-left: 0%;
+	}
+	#slide-console-btn{
+	position:absolute;
+	left: 88%; top: 0%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	#console-tools-btn{
+	position:absolute;
+	left: 88%; top: 18%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,1);
+	float: right;
+	display: block;
+	}
+	#user-textarea .application-button{
+	width: 2.25vw; height: 2.25vw;
+	padding: .25vw;
+	font-size: 1.5;
+	}
+	#file-menu .application-button{
+	left: 0%;
+	margin-top: .75%; margin-left: 0px;
+	font-size: 3.25vw;
+	}
+	#file-tool .application-button{
+	margin-top: .75%; margin-right: 3px;
+	font-size: 4vw;
+	}
+	#file-tool .application-link{
+	margin-top: .75%; margin-right: 3px;
+	font-size: 3vw;
+	}
+	.application-html{
+	position:fixed; margin:0mm; left:0mm; top:0mm; width:100%; padding:5mm; height:100%;
+	background-color:rgba(100,100,225,1); 
+	overflow-X:scroll; overflow-Y:scroll;
+	}
+	.application-button{
+	margin-top: .75%; 
+	font-size: 1.25vw;
+	}
+	.application-menu{
+	position: absolute;
+	left: 0%; top: 0%;
+	background-color:rgba(255,255,255,1);
+	}
+	.application-console{
+	position: fixed;
+	left: 0%; top: 0%;
+	width: 0%; height: 0%; 
+	opacity: 0;
+	overflow: hidden; display: block;
+	}
+	.title{
+	font-size: 1.5vw;
+	}
+	legend.title{
+	border-radius: 50px;
+	padding-left: 9px; padding-right: 9px;
+	background-color: rgba(175,175,175,1);
+	font-size: 3vw;
+	}
+}
