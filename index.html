@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
 
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/index-gpage.css">
+        <link rel="stylesheet" href="css/animate.css">
         
         <!-- [third party scripts] -->
 		<script src="js/x-tag-core.js"></script>
@@ -30,19 +30,31 @@
 		<script src="js/components-flipdeck.js"></script>
 		<script src="js/syntax.js"></script>
 
-        <title>Pi Reel</title>
+        <title>Pi Reel Dashboard</title>
     </head>
 
     <body>
 	    <!-- ========== [exentions component] ========== -->
-	    <web-ext lib-json="auto" meta-json="auto">
+	    <form user-action="dashboard.php"
+	      is="web-ext" lib-json="auto" meta-json="auto">
 	    	<fire-base id="lib-JSON" data-href="url(includes/json/lib.json)">
 	    		
 	    	</fire-base>
 	    	<fire-base id="meta-JSON" data-href="url(includes/json/meta.json)">
 	    		
 	    	</fire-base>
-	    </web-ext>
+	    	<script type="text/javascript">
+				var db;
+				function openDB() {
+				var DBOpenRequest = window.indexedDB.open('toDoList');
+				DBOpenRequest.onsuccess = function(e) {
+					db = DBOpenRequest.result;
+					console.log(db);
+					}
+				}
+				openDB();
+			</script>
+	    </form>
 
 		<!-- ========== [header] ========== -->
         <header>

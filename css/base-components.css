@@ -1,0 +1,38 @@
+/* CSS Document */
+/*
+  Author: Steven Van Sant
+  doctype: css
+  License: MIT License
+*/
+/* *****[fire-base] ***** */
+fire-base{
+	position: fixed; 
+	left: 0px; 
+	top: 0px; 
+	width: 0px; 
+	height: 0px;
+	overflow: hidden; 
+	opacity: 0;   
+}
+/* [media-base][fire-base] */
+fire-base[display="true"], form[is="media-base"]{
+	position: relative;
+	display: block;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	background-color: rgb(255,255,255);
+}
+form[is="media-base"]:first-child{
+	width: 50%;
+}
+
+media-base[type="blog"]{
+	
+}
+media-base[type="vlog"]{
+	
+}
+media-base[type="clog"]{
+	
+}

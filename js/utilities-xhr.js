@@ -22,6 +22,8 @@ var xhrUtil = xtag.mixins.requests = {
 		  var _doc = this.setMimeType(jx.fireRequests[this.id].type, xhr);
 		  var el = this,
 			xhrCheck = window.setInterval( function(){
+			  var _timer = new Date(), _sec = _timer.getSeconds();
+
 			  if (xhr.readyState === 4 && xhr.status === 200)
 				{
 				window.clearInterval(xhrCheck);
@@ -31,6 +33,7 @@ var xhrUtil = xtag.mixins.requests = {
 				_doc = _func(el, _doc);
 
 				}
+			  else if()
 			  }, 200 );
 		  return _doc;
 		  },
