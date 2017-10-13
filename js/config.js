@@ -1,0 +1,221 @@
+( function() {
+/* 
+============================================================================================================================= 
+	== [CONFIG.JS WAS MADE TO HELP OPEN SOURCE PROJECTS DEVELOP THE FRONT END THAT REQUIRE YOU TO USE A STRICT SCHEMA.] 
+	== [FOR MORE INFORMATION SEE PI REELS README.MD FILE OR OUR GITPAGE @TBD.]
+============================================================================================================================= 
+*/
+
+// ***** IS: PI CONFIGURATION
+  // ** FOR: WINDOW
+  // ** DOES:
+    // * CHECK FOR CUSTOM-ELEMENTS.MIN.JS
+	// * CHECK FOR XTAG
+	// * CREATE THE PI GLOBAL
+	// * UPDATE THE XTAG BUILD OBJECT
+	// * UPDATE THE XTAGELEMENT DEFINITION
+	// * PROMPT FOR USER INPUT
+	// * RETRIEVE SERVER SIDE RESOURCES USING XHR
+
+/* ***** IS: GLOBAL PI;
+  ** FOR: PI & XTAG;
+  ** DOES: 
+	* IMPLEMENTS THE CLEAR() METHOD TO WIPE THE INNERHTML OF ELEMENTS
+***** */
+var pi = {
+	mixin: (base) => class extends base {
+		// ** SOLUTION FOR CLEARING INNERHTML CONTENT OF NODES FOR XTAG**
+		set clear(target){
+			
+		}
+	},
+	pkgs: { },
+	/* ***** @IMPORT typeOf(obj) FROM: XTAG V1
+	  ** This is an enhanced typeof check for all types of objects. 
+	  ** Where typeof would normaly return 'object' for many common DOM objects (like NodeLists and HTMLCollections).
+	  ** For example: typeOf(document.children) will correctly return 'htmlcollection'
+
+	***** @IMPORT regexParseExt FROM: XTAG V1 RENAME TO: keyParser
+	  ** Extension parser from x-tag, used for the property extension and psuedo names.
+	  ** Enhanced to detect hyphenated names and associate it with meta data or constructor/class.
+	***** */
+	utils: {
+		typeCache: {},
+		keyParser: /([\w+\-]+)|(::|:)(\w+)(?:\((.+?(?=\)))\))?/g,
+		typeParser: /\s([a-zA-Z]+)/,
+		typeString: function(obj = pi.utils.typeCache){
+			return obj.toString;
+		},
+		typeOf: function(obj) {
+			var typeCache = pi.utils.typeCache,
+				type = pi.utils.typeString().call(obj);
+			return typeCache[type] || (typeCache[type] = type.match(pi.utils.typeParser)[1].toLowerCase());
+		}
+	},
+	createPackage: function(name, options){
+		
+	},
+	onPackageError: function(name, pkg, _func){
+	},
+	onPackageLoad: function(name, pkg, _func){
+		var _r = null;
+		var _interval = window.setInterval(function(){
+			// ***** CHECK PCKGS
+			if(pckgs){
+				if(pckgs.length) {
+					// LOOP THROUGH PCKGS ARRAY
+					for(var i=0; i < pckgs.length; i++){
+						// ***** COMPARE NAME AND PCKGS[I][NAME]
+						if(pckgs[i].name === name){
+							if(_func) {
+								_func(name, pckgs[i], pckgs);
+							}
+							// ***** CLEAR INTERVAL
+							window.clearInterval(_interval);
+							return _r = pckgs[i];
+						}
+					}
+				}
+				else if(pckgs[name]){
+					if(_func) {
+						_func(name, pckgs[name], pckgs);
+					}
+					// ***** CLEAR INTERVAL
+					window.clearInterval(_interval);
+					return _r = pckgs[name];
+				}
+			}
+		}, 125 );
+
+		return _r;
+	}
+};
+
+//**/ SCOPED GLOBAL VARIABLES START /**//
+var scheme = {
+	cloak: ["stylesheets", "library", "extensions"],
+	pagecloak: "auto",
+	name: "pi-schema",
+	"container::elem:page($;)": document.getElementsByTagName("x-page")[0] || document.createElement("x-page"),
+	"extension::elem:page($child;)": document.getElementsByTagName("pi-extension")[0] || document.createElement("pi-extension"),
+	"popup::elem:page($float;)": document.getElementsByTagName("pi-prompt")[0] || document.createElement("pi-prompt"),
+	"popuplists::elem:page($extension.child;)": document.getElementsByTagName("pi-list") || document.createElement("pi-list"),
+	"peekboxs::elem:page(2)": {
+		length: 2,
+		"$0(firstChild)": document.getElementsByTagName("x-peekbox")[0],
+		"$1(lastChild)": document.getElementsByTagName("x-peekbox")[1]
+	},
+	stylesheets: {
+		
+	},
+	/* ***** IS: BUILT IN RESOURCE COLLECTION
+	  ** TITLE: LIBRARY
+	  ** FOR: XTAG
+	  ** DOES: 
+	    * STORE A COLLECTION OF XTAG COMPONENT/EXTENSION RESOURCES
+		* STORE A COLLECTION OF PHYSICSJS WORLDS
+		* STORE A COLLECTION OF CYTOSCAPE GRAPHS
+	***** */
+	library: {
+		xtag: {
+			components: [],
+			extensions: []
+		},
+		// NOT SURE IF THEY ARE USING BOWER
+		physicsjs: {
+			worlds: []
+		},
+		// NOT SURE IF THEY ARE USING BOWER
+		cytoscape: {
+			graphs: []
+		}
+	},
+	extensions: {
+		pkgs: []
+	},
+	items: {
+		extensions: function(item, options){
+		
+		},
+		psuedos: function(item, options){
+			
+		},
+		hasScript: function(item, options){
+			var _s = document.scripts, i = 0, r = false;
+
+			// FIND THE REQUESTED SCRIPT ITEM
+			while(_s[i]){
+				_s[i].src === item ? r=_s[i] : false;
+				i++;
+			};
+
+			// EXECUTE OPTIONS IF AVAILABLE
+			if( pi.utils.typeOf(options) ){
+				
+			}
+			else{
+				
+			};
+
+			return r;
+		}
+	}
+};
+//**/ GLOBAL VARIABLES END /**//
+
+	/* ***** CUSTOM-ELEMENTS CHECK ***** */
+	if(scheme.items.hasScript("node_modules/core-2/lib/custom-elements.min.js") === false){
+		let _scc = document.createElement("script");
+			_scc.src = "node_modules/core-2/lib/custom-elements.min.js";
+		document.head.appendChild(_scc);
+	}
+	/* ***** XTAG CHECK ***** */
+	if(scheme.items.hasScript("node_modules/core-2/src/core.js") === false){
+		let _scx = document.createElement("script");
+			_scx.src = "node_modules/core-2/src/core.js";
+		document.head.appendChild(_scx);
+	}
+
+	/* ***** IS: EXTENSION;
+	  *** TITLE: CONFIG
+	  ** FOR: XTAG;
+	  ** DOES: 
+	    * PROMPT USER FOR INPUT;
+	    * GATHER RESOURCES FROM SERVER;
+	    * GATHER RESOURCES FROM USER;
+		* UPDATE XTAG BUILD OBJECT
+	*/
+	const config = {
+		name: "config",
+		meta: {
+			title: "",
+			version: 0,
+			description: ""
+		},
+		mixin: (base) => class extends base {
+			constructor(options){
+				
+			}
+		},
+		update: function(build, options) {
+			console.log("%c THANKS TO ALL THE CONTRIBUTORS OF PI REEL.", "color: rgb(145,255,145);");
+			// CHECK SCHEME API
+			scheme.cloak.forEach( function(current, item){ 
+				console.log(current); console.log(item); 
+			} );
+			// PUSH HTML SCHEMA IF PAGE CLOAK IS TRUE
+			if( scheme.pagecloak === true ){
+				for(var _k in scheme){
+					if(pi.utils.typeOf(scheme[_k]) === ""){}
+					else{
+						console.log(_k);
+						console.log(pi.utils.typeOf(scheme[_k]));
+					}
+				}
+			}
+		}
+	};
+	const _pi = new config.update("default", {
+	
+	} );
+} )();
