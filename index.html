@@ -1,95 +1,52 @@
-<!doctype HTML>
-<html>
-	<!-- ========== Author: Steven Van Sant ========== -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- ====================
+	Programmers: Steven Van Sant
+	Illustrator: Steven Van Sant
+	Graphics: Steven Van Sant, Font Awesome
+	Layout: Steven Van Sant
+	Dependencies: x-tags, cytoscape, physicsjs, jasmine
+	Description: Open Source Distro Made for science and Engineering
+==================== -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-        <meta charset="utf-8">
-        <meta name="description" content="Pi reel.">
-        <meta name="keywords" content="Git Hub, repo, animation, science, engineering, fits, pi reel">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">  <meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="v2/index.css">
+		<link rel="stylesheet" href="v2/css/pi.css">
 
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/animate.css">
-        
-        <!-- [third party scripts] -->
-		<script src="js/x-tag-core.js"></script>
+		<link rel="icon" type="image/png" href="/img/pire-ico.png">
+		<title>Pi Reel</title>
+	</head>
+	<body>
+		<!-- PI PAGE -->
+		<x-page id="container">
+			<!-- UPPER PEEK BOX -->
+			<x-peekbox id="upperContainer"> 
+				<div id="iult">
+					<a href="index.php"><img alt="Pi Reel" src="img/logos/pireel-05.png" width="100px" height="auto"/></a>
+				</div>
+				<?php
+					// welcome tab content
+					include "pkgs/home/bottom-menu.html";
+				?>
+			</x-peekbox>
 
-		<!-- [component scripts] -->
-		<script src="js/jx.js"></script>
-		<script src="js/animator.js"></script>
-		<script src="js/utilities.js"></script>
-		<script src="js/utilities-xhr.js"></script>
-		<script src="js/components.js"></script>
-		<script src="js/components-colors.js"></script>
-		<script src="js/components-jMenu.js"></script>
-		<script src="js/components-lists.js"></script>
-		<script src="js/components-editor.js"></script>
-		<script src="js/components-btns.js"></script>
-		<script src="js/components-flipdeck.js"></script>
-		<script src="js/syntax.js"></script>
+			<!-- EXTENSION -->
+			<pi-extension id="extension" type="indexedDB/interface" mode="minimized">
+				<pi-list id="app-list" type="icon/button" json="$url(pkgs/apps/list.json);" list="@{};"></pi-list>
+				<pi-item json="$url(pkgs/pkgs.json);"></pi-item>
+			</pi-extension>
 
-        <title>Pi Reel Dashboard</title>
-    </head>
-
-    <body>
-	    <!-- ========== [exentions component] ========== -->
-	    <form user-action="dashboard.php"
-	      is="web-ext" lib-json="auto" meta-json="auto">
-	    	<fire-base id="lib-JSON" data-href="url(includes/json/lib.json)">
-	    		
-	    	</fire-base>
-	    	<fire-base id="meta-JSON" data-href="url(includes/json/meta.json)">
-	    		
-	    	</fire-base>
-	    	<script type="text/javascript">
-				var db;
-				function openDB() {
-				var DBOpenRequest = window.indexedDB.open('toDoList');
-				DBOpenRequest.onsuccess = function(e) {
-					db = DBOpenRequest.result;
-					console.log(db);
-					}
-				}
-				openDB();
-			</script>
-	    </form>
-
-		<!-- ========== [header] ========== -->
-        <header>
-            <h1>Welcome to Pi Reel's Git Hub Page.</h1>
-            <a href="#"><img src="img/pireel.png" width="25%" height="auto"></img></a>
-        </header>
-
-		<!-- ========== [main display] ========== -->
-        <json-canvas id="main-display" class="block pireel-display" name="pireel-display" is="fire-viewer" 
-          src="PiReel-FireViewer/index.html">
-        </json-canvas>        
-
-		<!-- ========== [footer] ========== -->
-        <footer>
-            <nav class="inline-block">
-
-                <!-- ========== [Resource Links] ========== -->
-                <strong class="block">Resources</strong>
-                <a href="#"><strong title="block sub-title">Documentation</strong></a> 
-				<a href="http://x-tag.github.io/"><strong class="block">x-tag</strong></a>
-                <a href="https://www.apache.org/"><strong class="block">Apache</strong></a>
-                <a href="https://www.apachefriends.org/index.html"><strong class="block">XAMMP</strong></a>
-
-                <!-- ========== [Communication Channels] ========== -->
-				<strong class="block">Talk to us</strong>
-           		<a href="https://github.com/PiReel"><strong class="block">GitHub Issues</strong></a>
-            	<a href="https://gitter.im/PiReel/Lobby"><strong class="block">Gitter</strong></a>
-
-            </nav>
-
-           <!-- ========== [Citations] ========== -->
-            <cite class="inline-block">
-            	<a href="#">Copyright and Legal notice</a>
-            </cite>
-        </footer> 
-    </body>
-
+			<!-- BOTTOM PEEK BOX -->
+			<x-peekbox id="lowerContainer">
+				<?php
+					// BOTTOM PEEK BOX CONTENT
+					include "pkgs/home/bottom-menu.html";
+				?>
+			</x-peekbox>
+		</x-page>
+	</body>
+	<script type="text/javascript" src="js/config.js" async="true"></script>
 </html>
