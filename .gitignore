@@ -2,6 +2,5 @@
 *.php
 *.ini
 *.log
-*.build
 *.project
 /projects/steven_vansant/*

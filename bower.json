@@ -1,14 +1,12 @@
 {
-  "name": "x-tag-site",
-  "description": "",
+  "name": "pi-reel-site",
+  "description": "A suite of web applications made for science and engineering.",
   "version": "0.1.3",
   "keywords": [
     "web-components",
     "x-tag"
   ],
   "dependencies": {
-    "x-tag-basic-app-template": "*",
-    "x-tag-code-prism": "*",
-    "x-tag-tabbox": "*"
+	
   }
 }
