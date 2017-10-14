@@ -210,7 +210,7 @@ var scheme = {
 			} );
 
 			// PUSH HTML SCHEMA IF PAGE CLOAK IS TRUE
-			if( scheme.pagecloak === false ){ pi.sheet = scheme.sheet; }
+			if( scheme.sheet !== false ){ pi.sheet = scheme.sheet; }
 			
 			console.log(pi);
 		}
