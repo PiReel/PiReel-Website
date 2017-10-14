@@ -187,11 +187,12 @@ var scheme = {
 		* UPDATE XTAG BUILD OBJECT
 	*/
 	const config = {
+		// IS: EXTENSION NAME
 		name: "config",
 		meta: {
-			title: "",
-			version: 0,
-			description: ""
+			title: null,
+			version: null,
+			description: null
 		},
 		mixin: (base) => class extends base {
 			constructor(options){
@@ -199,15 +200,21 @@ var scheme = {
 			}
 		},
 		update: function(build, options) {
+			// SAY THANKS
 			console.log("%c THANKS TO ALL THE CONTRIBUTORS OF PI REEL.", "color: rgb(145,255,145);");
+
 			// CHECK SCHEME API
 			scheme.cloak.forEach( function(current, item){ 
 				console.log(current); console.log(item); 
 			} );
+
 			// PUSH HTML SCHEMA IF PAGE CLOAK IS TRUE
-			if( scheme.pagecloak === true ){
+			if( scheme.pagecloak === false ){
+				// LOOP THROUCH SCHEME OBJECT
 				for(var _k in scheme){
-					if(pi.utils.typeOf(scheme[_k]) === ""){}
+					if(pi.utils.typeOf(scheme[_k]) === "htmlelement"){
+						pi.
+					}
 					else{
 						console.log(_k);
 						console.log(pi.utils.typeOf(scheme[_k]));

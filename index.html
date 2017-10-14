@@ -12,21 +12,34 @@
 		<meta charset="utf-8">  <meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 
-		<link rel="stylesheet" href="css/styles.css">
-		<link rel="stylesheet" href="v2/index.css">
-		<link rel="stylesheet" href="v2/css/pi.css">
+		<link rel="stylesheet" href="css/styles.css"/>
+		<link rel="stylesheet" href="v2/index.css"/>
+		<link rel="stylesheet" href="v2/css/pi.css"/>
 
 		<link rel="icon" type="image/png" href="/img/pire-ico.png">
 		<title>Pi Reel</title>
 	</head>
 	<body>
 		<!-- PI PAGE -->
-		<x-page id="container">
+		<x-page id="gh_page-pireel">
 			<!-- UPPER PEEK BOX -->
 			<x-peekbox id="upperContainer"> 
 				<div id="iult">
 					<a href="index.php"><img alt="Pi Reel" src="img/logos/pireel-05.png" width="100px" height="auto"/></a>
 				</div>
+
+				<!-- ***** IS: ELEMNT [PI-LIST]
+				  ** FOR: FEATURED JAVASCRIPT LIBRARIES
+				  ** 
+				 -->
+				<pi-list type="icon/anchor" 
+					list='[
+						"Featured Javascirpt Libraries.",
+						{ "Xtags": "xtags/index.html" },
+						{ "Physicsjs": "physicsjs/index.html" },
+						{ "Cytoscape": "cytoscape/index.html" },
+						{ "fitsjs": "fitsjs/index.html" }
+						]'></pi-list>
 			</x-peekbox>
 
 			<!-- ***** EXTENSION ***** -->

@@ -3,4 +3,5 @@
 *.ini
 *.log
 *.project
+/schema/
 /projects/steven_vansant/*
