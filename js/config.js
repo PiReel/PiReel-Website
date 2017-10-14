@@ -107,9 +107,11 @@ var scheme = {
 			"$1(lastChild)": document.getElementsByTagName("x-peekbox")[1]
 		}
 	},
-	stylesheets: {
-		
-	},
+	stylesheets: [
+		"gh-pages.css",
+		"prompts.css",
+		"dashboards.css"
+	],
 	/* ***** IS: BUILT IN RESOURCE COLLECTION
 	  ** TITLE: LIBRARY
 	  ** FOR: XTAG
@@ -120,7 +122,10 @@ var scheme = {
 	***** */
 	library: {
 		xtag: {
-			components: [],
+			mixin: (base) => class extends base {
+				
+			},
+			components: ["pi-tags/pi-base/pi.js"],
 			extensions: []
 		},
 		// NOT SURE IF THEY ARE USING BOWER
