@@ -205,7 +205,7 @@ var scheme = {
 			console.log("%c THANKS TO ALL THE CONTRIBUTORS OF PI REEL.", "color: rgb(145,255,145);");
 
 			// CHECK SCHEME API
-			scheme.cloak.forEach( function(current, item){ 
+			scheme.mixins.forEach( function(current, item){ 
 				 
 			} );
 
