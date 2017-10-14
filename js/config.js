@@ -213,7 +213,7 @@ var scheme = {
 				// LOOP THROUCH SCHEME OBJECT
 				for(var _k in scheme){
 					if(pi.utils.typeOf(scheme[_k]) === "htmlelement"){
-						pi.
+						console.log(pi);
 					}
 					else{
 						console.log(_k);
