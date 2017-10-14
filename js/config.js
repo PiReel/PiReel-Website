@@ -58,32 +58,32 @@ var pi = {
 	onPackageError: function(name, pkg, _func){
 		
 	},
-	onPackageLoad: function(name, pkg, _func){
+	onPackageLoad: function(name, pkgs, _func){
 		var _r = null;
 		var _interval = window.setInterval(function(){
-			// ***** CHECK PCKGS
-			if(pckgs){
-				if(pckgs.length) {
+			// ***** CHECK PKGS
+			if(pkgs){
+				if(pkgs.length) {
 					// LOOP THROUGH PCKGS ARRAY
-					for(var i=0; i < pckgs.length; i++){
+					for(var i=0; i < pkgs.length; i++){
 						// ***** COMPARE NAME AND PCKGS[I][NAME]
-						if(pckgs[i].name === name){
+						if(pkgs[i].name === name){
 							if(_func) {
-								_func(name, pckgs[i], pckgs);
+								_func(name, pkgs[i], pkgs);
 							}
 							// ***** CLEAR INTERVAL
 							window.clearInterval(_interval);
-							return _r = pckgs[i];
+							return _r = pkgs[i];
 						}
 					}
 				}
-				else if(pckgs[name]){
+				else if(pkgs[name]){
 					if(_func) {
-						_func(name, pckgs[name], pckgs);
+						_func(name, pkgs[name], pkgs);
 					}
 					// ***** CLEAR INTERVAL
 					window.clearInterval(_interval);
-					return _r = pckgs[name];
+					return _r = pkgs[name];
 				}
 			}
 		}, 125 );
@@ -94,17 +94,18 @@ var pi = {
 
 //**/ SCOPED GLOBAL VARIABLES START /**//
 var scheme = {
-	cloak: ["stylesheets", "library", "extensions"],
-	pagecloak: "auto",
 	name: "pi-schema",
-	"container::elem:page($;)": document.getElementsByTagName("x-page")[0] || document.createElement("x-page"),
-	"extension::elem:page($child;)": document.getElementsByTagName("pi-extension")[0] || document.createElement("pi-extension"),
-	"popup::elem:page($float;)": document.getElementsByTagName("pi-prompt")[0] || document.createElement("pi-prompt"),
-	"popuplists::elem:page($extension.child;)": document.getElementsByTagName("pi-list") || document.createElement("pi-list"),
-	"peekboxs::elem:page(2)": {
-		length: 2,
-		"$0(firstChild)": document.getElementsByTagName("x-peekbox")[0],
-		"$1(lastChild)": document.getElementsByTagName("x-peekbox")[1]
+	mixins: ["stylesheets", "library", "extensions"],
+	sheet: {
+		"container::elem:page($;)": document.getElementsByTagName("x-page")[0] || document.createElement("x-page"),
+		"extension::elem:page($child;)": document.getElementsByTagName("pi-extension")[0] || document.createElement("pi-extension"),
+		"popup::elem:page($float;)": document.getElementsByTagName("pi-prompt")[0] || document.createElement("pi-prompt"),
+		"popuplists::elem:page($extension.child;)": document.getElementsByTagName("pi-list") || document.createElement("pi-list"),
+		"peekboxs::elem:page(2)": {
+			length: 2,
+			"$0(firstChild)": document.getElementsByTagName("x-peekbox")[0],
+			"$1(lastChild)": document.getElementsByTagName("x-peekbox")[1]
+		}
 	},
 	stylesheets: {
 		
@@ -205,22 +206,13 @@ var scheme = {
 
 			// CHECK SCHEME API
 			scheme.cloak.forEach( function(current, item){ 
-				console.log(current); console.log(item); 
+				 
 			} );
 
 			// PUSH HTML SCHEMA IF PAGE CLOAK IS TRUE
-			if( scheme.pagecloak === false ){
-				// LOOP THROUCH SCHEME OBJECT
-				for(var _k in scheme){
-					if(pi.utils.typeOf(scheme[_k]) === "htmlelement"){
-						console.log(pi);
-					}
-					else{
-						console.log(_k);
-						console.log(pi.utils.typeOf(scheme[_k]));
-					}
-				}
-			}
+			if( scheme.pagecloak === false ){ pi.sheet = scheme.sheet; }
+			
+			console.log(pi);
 		}
 	};
 	const _pi = new config.update("default", {
