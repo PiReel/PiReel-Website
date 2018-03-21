@@ -1,58 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- ====================
-	Programmers: Steven Van Sant
-	Illustrator: Steven Van Sant
-	Graphics: Steven Van Sant, Font Awesome
-	Layout: Steven Van Sant
-	Dependencies: x-tags, cytoscape, physicsjs, jasmine
-	Description: Open Source Distro Made for science and Engineering
-==================== -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8">  <meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
 
-		<link rel="stylesheet" href="css/styles.css"/>
-		<link rel="stylesheet" href="v2/index.css"/>
-		<link rel="stylesheet" href="v2/css/pi.css"/>
-
-		<link rel="icon" type="image/png" href="/img/pire-ico.png">
-		<title>Pi Reel</title>
+		<link rel="icon" type="image/png" href="">
+		<title>Kippikios GHub</title>
 	</head>
 	<body>
-		<!-- PI PAGE -->
-		<x-page id="gh_page-pireel">
-			<!-- UPPER PEEK BOX -->
-			<x-peekbox id="upperContainer"> 
-				<div id="iult">
-					<a href="index.php"><img alt="Pi Reel" src="img/logos/pireel-05.png" width="100px" height="auto"/></a>
-				</div>
-
-				<!-- ***** IS: ELEMNT [PI-LIST]
-				  ** FOR: FEATURED JAVASCRIPT LIBRARIES
-				  ** 
-				 -->
-				<pi-list type="icon/anchor" 
-					list='[
-						"Featured Javascirpt Libraries.",
-						{ "Xtags": "xtags/index.html" },
-						{ "Physicsjs": "physicsjs/index.html" },
-						{ "Cytoscape": "cytoscape/index.html" },
-						{ "fitsjs": "fitsjs/index.html" }
-						]'></pi-list>
-			</x-peekbox>
-
-			<!-- ***** EXTENSION ***** -->
-			<pi-extension id="extension" type="indexedDB/interface" mode="minimized">
-				<pi-list id="app-list" type="icon/button" json="$url(pkgs/apps/list.json);" list="@{};"></pi-list>
-				<pi-item json="$url(pkgs/pkgs.json);"></pi-item>
-			</pi-extension>
-
-			<!-- BOTTOM PEEK BOX -->
-			<x-peekbox id="lowerContainer">
-				
-			</x-peekbox>
-		</x-page>
 	</body>
-	<script type="text/javascript" src="js/config.js" async="true"></script>
 </html>
